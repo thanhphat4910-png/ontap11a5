@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ôn Tập by 11A5</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+      window.__mathjaxFailed = false;
+      window.__chartjsFailed = false;
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      onerror="window.__mathjaxFailed = true"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"
+      onerror="window.__chartjsFailed = true"
+    ></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-left">
+        <button
+          class="logo"
+          id="btn-home"
+          aria-label="Về trang chủ"
+          title="Về trang chủ"
+        >
+          <span
+            class="logo-icon"
+            data-icon="bookOpen"
+            aria-hidden="true"
+          ></span>
+          <span class="logo-text">Home</span>
+        </button>
+      </div>
+      <div class="header-right">
+        <button
+          class="btn btn-ghost btn-with-icon"
+          id="btn-profile"
+          aria-label="Hồ sơ"
+          title="Hồ sơ"
+        >
+          <span class="btn-icon-svg" data-icon="user" aria-hidden="true"></span>
+          <span class="btn-text">Hồ sơ</span>
+        </button>
+        <button
+          class="btn btn-ghost btn-with-icon"
+          id="btn-settings"
+          aria-label="Cài đặt"
+          title="Cài đặt"
+        >
+          <span
+            class="btn-icon-svg"
+            data-icon="settings"
+            aria-hidden="true"
+          ></span>
+          <span class="btn-text">Cài đặt</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="app-main" class="app-main" tabindex="-1"></main>
+
+    <div id="modal-root"></div>
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
