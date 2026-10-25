@@ -199,8 +199,849 @@ const QUESTION_BANK = [
   //======= Sinh học ==============
   { id: "sinh-hoc", name: "Sinh học", chapters: [] },
   //======= Tin học ==============
-  { id: "tin-hoc", name: "Tin học", chapters: [] },
-  //======= Lịch sử ==============
+  {
+    id: "tin-hoc",
+    name: "Tin học",
+    chapters: [
+      {
+        id: "tinhocgiuaky-ontap",
+        name: "Ôn tập giữa kỳ I",
+        exams: [
+          {
+            id: "tinhocgiuakyi-ontap",
+            title: "Đề cương ôn tập giữa kì I môn Tin học lớp 11",
+            examType: "Giữa kì I",
+            description: "Đề cương ôn tập giữa kì I môn Tin học lớp 11",
+            duration: 45,
+            questions: [
+              {
+                id: "tinhocgiuakymot-ontap-q1",
+                type: "multiple-choice",
+                content:
+                  "Hệ điều hành máy tính có bao nhiêu nhóm chức năng chính?",
+                options: [
+                  { id: "a", text: "3 nhóm" },
+                  { id: "b", text: "4 nhóm" },
+                  { id: "c", text: "5 nhóm" },
+                  { id: "d", text: "6 nhóm" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q2",
+                type: "multiple-choice",
+                content:
+                  "Hai yếu tố quan trọng nhất thúc đẩy sự phát triển của hệ điều hành dành cho máy tính cá nhân (PC) là gì?",
+                options: [
+                  { id: "a", text: "Điện toán đám mây và kết nối không dây" },
+                  {
+                    id: "b",
+                    text: "Giao diện đồ họa (GUI) và cơ chế Plug & Play",
+                  },
+                  { id: "c", text: "Khả năng tính toán số học và bảo mật cao" },
+                  { id: "d", text: "Mã nguồn mở và tính năng đa người dùng" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q3",
+                type: "multiple-choice",
+                content:
+                  "Hệ điều hành MS-DOS ban đầu cho máy tính cá nhân sử dụng loại giao diện nào?",
+                options: [
+                  { id: "a", text: "Giao diện đồ họa (GUI)" },
+                  { id: "b", text: "Giao diện cảm ứng" },
+                  { id: "c", text: "Giao diện dòng lệnh (CLI)" },
+                  { id: "d", text: "Giao diện giọng nói" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q4",
+                type: "multiple-choice",
+                content:
+                  "Mối quan hệ giữa phần cứng, hệ điều hành và phần mềm ứng dụng được mô tả đúng nhất là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Phần mềm ứng dụng điều khiển trực tiếp phần cứng không cần hệ điều hành",
+                  },
+                  {
+                    id: "b",
+                    text: "Phần cứng điều khiển hệ điều hành để chạy phần mềm ứng dụng",
+                  },
+                  {
+                    id: "c",
+                    text: "Hệ điều hành là môi trường trung gian cung cấp dịch vụ giúp phần mềm ứng dụng khai thác phần cứng",
+                  },
+                  {
+                    id: "d",
+                    text: "Hệ điều hành hoạt động hoàn toàn độc lập với phần cứng",
+                  },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q5",
+                type: "multiple-choice",
+                content:
+                  "Khi người dùng mở đồng thời trình duyệt Chrome, phần mềm Word và Zalo trên laptop, chức năng nào của hệ điều hành đang hoạt động chính?",
+                options: [
+                  { id: "a", text: "Quản lý thiết bị ngoại vi" },
+                  {
+                    id: "b",
+                    text: "Tổ chức thực hiện các chương trình và điều phối tài nguyên (Tính năng Đa nhiệm)",
+                  },
+                  { id: "c", text: "Định dạng đĩa cứng" },
+                  { id: "d", text: "Cơ chế Plug & Play" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q6",
+                type: "multiple-choice",
+                content:
+                  "Trong hệ điều hành Windows, tiện ích mặc định nào được dùng để quản lý tệp và thư mục?",
+                options: [
+                  { id: "a", text: "Task Manager" },
+                  { id: "b", text: "Disk Cleanup" },
+                  { id: "c", text: "File Explorer" },
+                  { id: "d", text: "Device Manager" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q7",
+                type: "multiple-choice",
+                content:
+                  "Tiện ích Check Disk trong Windows được sử dụng nhằm mục đích chính gì?",
+                options: [
+                  { id: "a", text: "Dọn dẹp tệp rác" },
+                  {
+                    id: "b",
+                    text: "Kiểm tra, khắc phục lỗi liên kết tệp và khử vùng bad sector",
+                  },
+                  { id: "c", text: "Nén các tệp dung lượng lớn" },
+                  { id: "d", text: "Khóa thư mục cá nhân" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q8",
+                type: "multiple-choice",
+                content:
+                  "Tiện ích Optimize / Defragment (Hợp mảnh đĩa) cải thiện tốc độ đọc/ghi của đĩa HDD bằng cách nào?",
+                options: [
+                  { id: "a", text: "Xóa bớt các hình ảnh trùng lặp" },
+                  {
+                    id: "b",
+                    text: "Sắp xếp lại các liên cung (cluster) rải rác về các đường ghi (track) liên tục, giảm thời gian di chuyển cơ học của đầu đọc",
+                  },
+                  { id: "c", text: "Tăng tần số xung nhịp của CPU" },
+                  { id: "d", text: "Chuyển dữ liệu HDD sang RAM" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q9",
+                type: "multiple-choice",
+                content:
+                  "Thao tác nhấp nút phải chuột vào một tệp tin trên Windows có tác dụng gì?",
+                options: [
+                  { id: "a", text: "Mở trực tiếp tệp tin đó" },
+                  {
+                    id: "b",
+                    text: "Mở bảng chọn ngữ cảnh (Context Menu) chứa các lệnh có thể thực hiện với tệp",
+                  },
+                  { id: "c", text: "Xóa ngay lập tức tệp tin" },
+                  { id: "d", text: "Đổi tên tệp tin tự động" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q10",
+                type: "multiple-choice",
+                content:
+                  "Máy tính của bạn An báo dung lượng đĩa C sắp đầy do tích tụ nhiều tệp tạm (temporary files). Tiện ích hệ điều hành nào là tối ưu nhất để giải quyết?",
+                options: [
+                  { id: "a", text: "Check Disk" },
+                  { id: "b", text: "Optimize Drive" },
+                  { id: "c", text: "Disk Cleanup" },
+                  { id: "d", text: "Task Manager" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q11",
+                type: "multiple-choice",
+                content:
+                  "Chương trình được viết bằng ngôn ngữ lập trình bậc cao gần với ngôn ngữ tự nhiên được gọi là gì?",
+                options: [
+                  { id: "a", text: "Mã máy (machine code)" },
+                  { id: "b", text: "Mã nguồn (source code)" },
+                  { id: "c", text: "Mã nhị phân" },
+                  { id: "d", text: "Mã dịch" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q12",
+                type: "multiple-choice",
+                content:
+                  "Giấy phép phần mềm nguồn mở phổ biến nhất hiện nay là gì?",
+                options: [
+                  { id: "a", text: "EULA" },
+                  { id: "b", text: "GNU GPL (GNU General Public License)" },
+                  { id: "c", text: "Commercial License" },
+                  { id: "d", text: "Copyright Reserved" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q13",
+                type: "multiple-choice",
+                content:
+                  'Điểm khác biệt cơ bản giữa phần mềm thương mại "đóng gói" và phần mềm thương mại "đặt hàng" là gì?',
+                options: [
+                  { id: "a", text: "Đóng gói miễn phí, đặt hàng tính phí" },
+                  {
+                    id: "b",
+                    text: "Đóng gói viết hoàn chỉnh để bán rộng rãi cho nhu cầu chung; đặt hàng thiết kế theo yêu cầu riêng của từng tổ chức",
+                  },
+                  {
+                    id: "c",
+                    text: "Đóng gói cung cấp mã nguồn, đặt hàng giấu mã nguồn",
+                  },
+                  {
+                    id: "d",
+                    text: "Cả hai đều chạy trực tuyến trên trình duyệt",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q14",
+                type: "multiple-choice",
+                content:
+                  "Điểm quan trọng nhất trong điều khoản của giấy phép GNU GPL đối với người sửa đổi phần mềm nguồn mở là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Được phép giấu mã nguồn phần sửa đổi để bán bản quyền đóng",
+                  },
+                  {
+                    id: "b",
+                    text: "Phải công bố rõ mã nguồn phần sửa đổi và áp dụng cùng giấy phép GNU GPL cho sản phẩm mới",
+                  },
+                  {
+                    id: "c",
+                    text: "Không được phép chia sẻ sản phẩm đã sửa đổi",
+                  },
+                  {
+                    id: "d",
+                    text: "Phải trả phí bản quyền cho tác giả ban đầu",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q15",
+                type: "multiple-choice",
+                content:
+                  "Nhóm học sinh muốn chọn công cụ soạn thảo văn bản làm bài tập nhóm trực tuyến, tự động lưu đám mây và chia sẻ cùng chỉnh sửa theo thời gian thực. Lựa chọn nào phù hợp nhất?",
+                options: [
+                  { id: "a", text: "Microsoft Word 2003" },
+                  { id: "b", text: "Google Docs" },
+                  { id: "c", text: "Notepad" },
+                  { id: "d", text: "Pascal" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q16",
+                type: "multiple-choice",
+                content:
+                  "Bộ xử lý trung tâm (CPU) được cấu tạo từ hai bộ phận chính nào?",
+                options: [
+                  { id: "a", text: "RAM và ROM" },
+                  {
+                    id: "b",
+                    text: "Bộ số học & logic (ALU) và Bộ điều khiển (CU)",
+                  },
+                  { id: "c", text: "Thanh ghi và Bộ nhớ đệm" },
+                  { id: "d", text: "Đĩa cứng và Bảng mạch chính" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q17",
+                type: "multiple-choice",
+                content: "Đặc điểm nào sau đây mô tả đúng về bộ nhớ RAM?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Là bộ nhớ chỉ đọc, không mất dữ liệu khi tắt máy",
+                  },
+                  {
+                    id: "b",
+                    text: "Là bộ nhớ đọc/ghi tạm thời, dữ liệu sẽ bị xóa sạch khi mất điện hoặc tắt máy",
+                  },
+                  { id: "c", text: "Dùng để lưu trữ hệ thống BIOS định sẵn" },
+                  { id: "d", text: "Có dung lượng lớn hơn ổ đĩa cứng" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q18",
+                type: "multiple-choice",
+                content:
+                  "Phép toán logic XOR (hoặc loại trừ) giữa hai đại lượng x và y cho giá trị bằng 1 trong trường hợp nào?",
+                options: [
+                  { id: "a", text: "Khi cả x và y đều bằng 1" },
+                  { id: "b", text: "Khi cả x và y đều bằng 0" },
+                  {
+                    id: "c",
+                    text: "Khi hai đại lượng x và y có giá trị khác nhau (một bên bằng 0, một bên bằng 1)",
+                  },
+                  { id: "d", text: "Trong mọi trường hợp" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q19",
+                type: "multiple-choice",
+                content:
+                  "Trong phép cộng hai bit nhị phân $x+y$, mạch logic nửa cộng cho ra hai đầu ra là bit nhớ $z$ và bit kết quả $t$. Công thức logic của $z$ và $t$ là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "$z=x \\text{ OR } y$ và $t=x \\text{ AND } y$",
+                  },
+                  {
+                    id: "b",
+                    text: "$z=x \\text{ AND } y$ và $t=x \\text{ XOR } y$",
+                  },
+                  {
+                    id: "c",
+                    text: "$z = \\text{NOT } x$ và $t = \\text{NOT } y$",
+                  },
+                  {
+                    id: "d",
+                    text: "$z=x \\text{ XOR } y$ và $t=x \\text{ AND } y$",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q20",
+                type: "multiple-choice",
+                content:
+                  "Kết quả của phép cộng hai số nhị phân $1010+101$ chuyển sang hệ thập phân có giá trị bằng bao nhiêu?",
+                options: [
+                  { id: "a", text: "13" },
+                  { id: "b", text: "15" },
+                  { id: "c", text: "17" },
+                  { id: "d", text: "19" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q21",
+                type: "multiple-choice",
+                content:
+                  "Đơn vị dpi (dots per inch) được dùng để đo thông số nào của chuột và máy in?",
+                options: [
+                  { id: "a", text: "Tốc độ xử lý" },
+                  { id: "b", text: "Dung lượng bộ nhớ" },
+                  { id: "c", text: "Độ phân giải" },
+                  { id: "d", text: "Tần số quét" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q22",
+                type: "multiple-choice",
+                content:
+                  "Cổng kết nối truyền tải tín hiệu hình ảnh dưới dạng tương tự (analog) truyền thống là cổng nào?",
+                options: [
+                  { id: "a", text: "HDMI" },
+                  { id: "b", text: "VGA" },
+                  { id: "c", text: "USB-C" },
+                  { id: "d", text: "DisplayPort" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q23",
+                type: "multiple-choice",
+                content:
+                  "Vì sao chuẩn cổng kết nối HDMI ngày nay lại được ưu tiên lựa chọn thay thế cho cổng VGA?",
+                options: [
+                  { id: "a", text: "Vì cáp VGA quá đắt tiền" },
+                  {
+                    id: "b",
+                    text: "Vì HDMI truyền tín hiệu số, truyền đồng thời cả hình ảnh sắc nét và âm thanh qua duy nhất 1 sợi cáp",
+                  },
+                  {
+                    id: "c",
+                    text: "Vì cổng VGA không thể cắm vào máy tính bàn",
+                  },
+                  { id: "d", text: "Vì HDMI chỉ dùng cho thiết bị di động" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q24",
+                type: "multiple-choice",
+                content:
+                  "Thao tác bắt buộc phải thực hiện khi lần đầu tiên kết nối thiết bị qua sóng Bluetooth với máy tính/điện thoại là gì?",
+                options: [
+                  { id: "a", text: "Cài đặt lại hệ điều hành" },
+                  { id: "b", text: "Ghép đôi (Pairing)" },
+                  { id: "c", text: "Định dạng lại ổ cứng" },
+                  { id: "d", text: "Chống phân mảnh đĩa" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q25",
+                type: "multiple-choice",
+                content:
+                  "Một bức ảnh có kích thước điểm ảnh $3000\\times2000$ pixel. Nếu ảnh được in ra giấy ở độ phân giải chuẩn 300 dpi, kích thước thực tế của bức ảnh in sẽ là bao nhiêu inch?",
+                options: [
+                  { id: "a", text: "$5\\times3.5$ inch" },
+                  { id: "b", text: "$10\\times6.67$ inch" },
+                  { id: "c", text: "$12\\times8$ inch" },
+                  { id: "d", text: "$15\\times10$ inch" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q26",
+                type: "multiple-choice",
+                content:
+                  "Dịch vụ lưu trữ và chia sẻ tệp tin trên Internet còn được gọi bằng tên gọi phổ biến khác là gì?",
+                options: [
+                  { id: "a", text: "Dịch vụ đĩa quang" },
+                  {
+                    id: "b",
+                    text: "Dịch vụ Lưu trữ đám mây (ổ đĩa trực tuyến)",
+                  },
+                  { id: "c", text: "Dịch vụ mạng LAN" },
+                  { id: "d", text: "Dịch vụ lưu trữ ROM" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q27",
+                type: "multiple-choice",
+                content:
+                  "Tên gọi nào sau đây KHÔNG phải là dịch vụ ổ đĩa trực tuyến phổ biến hiện nay?",
+                options: [
+                  { id: "a", text: "Google Drive" },
+                  { id: "b", text: "Microsoft OneDrive" },
+                  { id: "c", text: "Dropbox" },
+                  { id: "d", text: "Windows Media Player" },
+                ],
+                correctOptionId: "d",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q28",
+                type: "multiple-choice",
+                content:
+                  "Trên Google Drive, chế độ phân quyền chia sẻ nào cho phép người nhận có đầy đủ các thao tác cao nhất như xem, nhận xét, sửa đổi, tạo mới và xóa tệp/thư mục?",
+                options: [
+                  { id: "a", text: "Người xem (Viewer)" },
+                  { id: "b", text: "Người nhận xét (Commenter)" },
+                  { id: "c", text: "Người chỉnh sửa (Editor)" },
+                  { id: "d", text: "Người theo dõi" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q29",
+                type: "multiple-choice",
+                content:
+                  "Ưu điểm vượt trội nhất của việc sử dụng ổ đĩa trực tuyến để lưu trữ dữ liệu so với bộ nhớ ngoài (USB, ổ cứng di động) là gì?",
+                options: [
+                  { id: "a", text: "Không bao giờ sợ lộ mật khẩu" },
+                  {
+                    id: "b",
+                    text: "Truy cập dữ liệu ở bất kỳ đâu, trên bất kỳ thiết bị nào có kết nối Internet và dễ dàng chia sẻ làm việc nhóm",
+                  },
+                  {
+                    id: "c",
+                    text: "Hoạt động bình thường cả khi không có mạng",
+                  },
+                  { id: "d", text: "Không giới hạn dung lượng miễn phí" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q30",
+                type: "multiple-choice",
+                content:
+                  "Trưởng nhóm muốn gửi liên kết tài liệu bài tập trên Google Drive cho giáo viên chủ nhiệm để xin ý kiến đóng góp trực tiếp mà không sợ bị sửa xáo trộn bản gốc. Trưởng nhóm nên chọn chế độ chia sẻ nào?",
+                options: [
+                  { id: "a", text: "Người xem" },
+                  { id: "b", text: "Người nhận xét" },
+                  { id: "c", text: "Người chỉnh sửa" },
+                  { id: "d", text: "Tắt tính năng chia sẻ" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q31",
+                type: "multiple-choice",
+                content:
+                  "Để thực hiện tìm kiếm thông tin bằng tiếng nói trên Google, người dùng nhấp chuột vào biểu tượng nào trên ô nhập từ khóa?",
+                options: [
+                  { id: "a", text: "Biểu tượng kính phóng đại" },
+                  { id: "b", text: "Biểu tượng micro" },
+                  { id: "c", text: "Biểu tượng camera" },
+                  { id: "d", text: "Biểu tượng dấu cộng" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q32",
+                type: "multiple-choice",
+                content:
+                  "Cú pháp nâng cao nào được thêm vào tìm kiếm Google để giới hạn kết quả trả về chỉ gồm các tập tin có định dạng PDF?",
+                options: [
+                  { id: "a", text: "file:pdf" },
+                  { id: "b", text: "type pdf" },
+                  { id: "c", text: "filetype:pdf" },
+                  { id: "d", text: "format:pdf" },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q33",
+                type: "multiple-choice",
+                content:
+                  'Việc đặt từ khóa tìm kiếm bên trong cặp dấu nháy kép "" (ví dụ: "tuyển sinh Đại học Dược Hà Nội") có tác dụng gì?',
+                options: [
+                  {
+                    id: "a",
+                    text: "Mở rộng phạm vi tìm kiếm sang trang web tiếng Anh",
+                  },
+                  {
+                    id: "b",
+                    text: "Bắt buộc máy tìm kiếm lọc và chỉ trả về kết quả chứa chính xác cụm từ đó theo đúng thứ tự",
+                  },
+                  { id: "c", text: "Tự động tải tệp tin về máy" },
+                  { id: "d", text: "Chuyển từ khóa sang tiếng nói" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q34",
+                type: "multiple-choice",
+                content:
+                  "Học sinh muốn tìm kiếm bài trình chiếu PowerPoint (.pptx) thuộc bộ sách Kết nối tri thức môn Tin học 11. Cú pháp tìm kiếm nào sau đây là tối ưu nhất?",
+                options: [
+                  { id: "a", text: "Tin hoc 11 pptx" },
+                  {
+                    id: "b",
+                    text: '"Tin học 11" "Kết nối tri thức" filetype:pptx',
+                  },
+                  { id: "c", text: 'filetype:doc "Tin học 11"' },
+                  { id: "d", text: 'ppt "Kết nối tri thức"' },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q35",
+                type: "multiple-choice",
+                content:
+                  "Trong dịch vụ Gmail, hệ thống tự động xác định và đánh dấu thư quan trọng bằng biểu tượng nào?",
+                options: [
+                  { id: "a", text: "Biểu tượng ngôi sao đỏ" },
+                  {
+                    id: "b",
+                    text: "Biểu tượng dấu quan trọng hình mũi tên màu vàng",
+                  },
+                  { id: "c", text: "Biểu tượng ghim giấy" },
+                  { id: "d", text: "Biểu tượng ô khóa" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q36",
+                type: "multiple-choice",
+                content:
+                  "Để tìm kiếm nhanh tất cả các thư điện tử được đánh dấu quan trọng trong Gmail, người dùng gõ câu lệnh nào vào ô tìm kiếm?",
+                options: [
+                  { id: "a", text: "label:starred" },
+                  { id: "b", text: "is:important" },
+                  { id: "c", text: "has:attachment" },
+                  { id: "d", text: "in:sent" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q37",
+                type: "multiple-choice",
+                content:
+                  "Tính năng Nhãn (Label) trong Gmail khác với Thư mục (Folder) trên máy tính ở điểm quan trọng nào?",
+                options: [
+                  { id: "a", text: "Nhãn không thể xóa được" },
+                  {
+                    id: "b",
+                    text: "Một thư điện tử có thể được gắn đồng thời nhiều Nhãn khác nhau",
+                  },
+                  {
+                    id: "c",
+                    text: "Thư mục cho phép tìm kiếm còn Nhãn thì không",
+                  },
+                  { id: "d", text: "Nhãn chỉ dùng được trên điện thoại" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q38",
+                type: "multiple-choice",
+                content:
+                  "Để tránh bị người khác tự ý gắn thẻ (tag) mình vào các bài viết rác xuất hiện trên trang cá nhân Facebook, người dùng nên bật thiết lập nào?",
+                options: [
+                  { id: "a", text: "Bật chế độ công khai bài viết" },
+                  {
+                    id: "b",
+                    text: "Bật tính năng xét duyệt bài viết có gắn thẻ trước khi xuất hiện trên trang cá nhân",
+                  },
+                  { id: "c", text: "Xóa tài khoản cá nhân" },
+                  { id: "d", text: "Đổi tên Fanpage" },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q39",
+                type: "true-false",
+                content:
+                  "Cho các phát biểu về lịch sử phát triển của hệ điều hành và các tiện ích quản lý hệ thống:",
+                statements: [
+                  {
+                    id: "a",
+                    text: 'Giao diện đồ họa (GUI) và cơ chế "Plug & Play" là hai yếu tố quan trọng thúc đẩy sự phát triển của hệ điều hành PC.',
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Tiện ích File Explorer trong Windows được dùng để quản lý cây thư mục và các tệp tin.",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: "Hệ điều hành MS-DOS ban đầu cho máy tính cá nhân đã sử dụng giao diện đồ họa thân thiện với biểu tượng cửa sổ.",
+                    correct: false,
+                  },
+                  {
+                    id: "d",
+                    text: "Tiện ích Disk Cleanup giúp kiểm tra, khắc phục lỗi liên kết tệp và xử lý các vùng bad sector trên đĩa cứng.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q40",
+                type: "true-false",
+                content:
+                  "Cho các phát biểu về phần mềm nguồn mở, phần mềm trực tuyến và bộ xử lý CPU:",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Giấy phép GNU GPL bắt buộc người sửa đổi phần mềm nguồn mở phải công khai mã nguồn phần sửa đổi và áp dụng cùng giấy phép.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Phần mềm chạy trên Internet (như Google Docs) bắt buộc người dùng phải cài đặt bộ phần mềm vào đĩa cứng máy tính.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Bộ xử lý trung tâm CPU gồm hai thành phần cốt lõi là Bộ số học & logic (ALU) và Bộ điều khiển (CU).",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Phép toán logic XOR giữa hai đại lượng x và y cho giá trị bằng 1 khi cả x và y có giá trị giống nhau.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q41",
+                type: "true-false",
+                content:
+                  "Trong thiết lập kết nối các thiết bị số và tính toán thông số kỹ thuật:",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Cổng HDMI hỗ trợ truyền đồng thời cả tín hiệu hình ảnh sắc nét và âm thanh kỹ thuật số qua một sợi cáp duy nhất.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Khi lần đầu kết nối tai nghe không dây với điện thoại qua Bluetooth, bắt buộc phải thực hiện thao tác ghép đôi (pairing).",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: "Một bức ảnh kích thước $3000\\times2000$ pixel khi in ở độ phân giải 300 dpi sẽ cho kích thước bản in thực tế là $10\\times6.67$ inch.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Màn hình có tần số quét càng cao thì hình ảnh hiển thị càng mỏi mắt và gây giật hình.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q42",
+                type: "true-false",
+                content:
+                  "Về dịch vụ lưu trữ đám mây Google Drive và kỹ năng tìm kiếm nâng cao trên Google:",
+                statements: [
+                  {
+                    id: "a",
+                    text: 'Quyền "Người nhận xét" trên Google Drive cho phép xem và đóng góp ý kiến nhưng không làm thay đổi trực tiếp văn bản gốc.',
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: 'Việc đặt cụm từ khóa trong cặp dấu nháy kép "" trên Google giúp mở rộng phạm vi tìm kiếm sang nhiều từ đồng nghĩa.',
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Cú pháp filetype:pdf giúp lọc các kết quả tìm kiếm trả về chỉ gồm các tệp đính kèm có định dạng .pdf.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Chủ sở hữu tệp trên Google Drive không thể thay đổi hoặc hủy bỏ quyền chia sẻ sau khi đã gửi liên kết cho người khác.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "tinhocgiuakymot-ontap-q43",
+                type: "true-false",
+                content:
+                  "Trong quản lý thư điện tử Gmail và thiết lập an toàn trên mạng xã hội Facebook:",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Trong Gmail, một bức thư điện tử có thể được gắn đồng thời nhiều Nhãn (Label) khác nhau để quản lý linh hoạt.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Xóa một Nhãn (Label) trong Gmail sẽ làm xóa vĩnh viễn tất cả các bức thư đang được đính nhãn đó.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Bật tính năng xét duyệt bài viết có gắn thẻ trước khi xuất hiện trên trang cá nhân Facebook giúp chủ động chặn bài viết rác.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Việc tạo và duy trì một Fanpage trên Facebook bắt buộc người dùng phải trả phí quản trị hàng tháng.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   //======= Lịch sử ==============
   {
     id: "lich-su",
