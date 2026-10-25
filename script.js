@@ -148,7 +148,7 @@ const QUESTION_TYPE_ORDER = {
   "fill-blank": 4,
 };
 
-/* ====== ICONS (SVG, không dùng emoji) ====== */
+/* ====== ICONS (SVG) ====== */
 const ICONS = {
   settings: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`,
   user: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
@@ -172,7 +172,6 @@ const ICONS = {
   chart: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>`,
 };
 
-/* Map subject ID → icon key */
 const SUBJECT_ICON_MAP = {
   toan: "calculator",
   "vat-ly": "atom",
@@ -184,7 +183,7 @@ const SUBJECT_ICON_MAP = {
   "tieng-anh": "languages",
 };
 
-/* ====== 2. KHO ĐỀ (8 MÔN) ====== */
+/* ====== 2. KHO ĐỀ ====== */
 const QUESTION_BANK = [
   //======= toán==============
   {
@@ -2567,18 +2566,37 @@ function startSession(exam, mode, timeLimitMinutes, extra) {
   if (mode === "exam" && timeLimitMs) startExamTimer();
 }
 
+/* Theo dõi interval ID ở cấp module — không phụ thuộc state.session */
+let activeExamTimerId = null;
+
 function startExamTimer() {
+  stopExamTimer();
   if (!state.session || !state.session.timeLimitMs) return;
+
+  const sessionRef = state.session;
+
   const tick = () => {
-    if (!state.session || state.session.submitted) return;
-    const elapsed = Date.now() - state.session.startTime;
-    const remaining = state.session.timeLimitMs - elapsed;
-    const elTimer = document.getElementById("exam-timer");
-    if (remaining <= 0) {
-      if (elTimer) elTimer.textContent = "00:00";
-      submitSession("timeout");
+    if (state.session !== sessionRef) {
+      stopExamTimer();
       return;
     }
+    if (sessionRef.submitted) {
+      stopExamTimer();
+      return;
+    }
+
+    const elapsed = Date.now() - sessionRef.startTime;
+    const remaining = sessionRef.timeLimitMs - elapsed;
+    const elTimer = document.getElementById("exam-timer");
+
+    if (remaining <= 0) {
+      if (elTimer) elTimer.textContent = "00:00";
+      if (state.session === sessionRef && !sessionRef.submitted) {
+        submitSession("timeout");
+      }
+      return;
+    }
+
     if (elTimer) {
       const mins = Math.floor(remaining / 60000);
       const secs = Math.floor((remaining % 60000) / 1000);
@@ -2586,28 +2604,32 @@ function startExamTimer() {
       if (remaining <= 60000) elTimer.classList.add("urgent");
     }
   };
+
   tick();
-  state.session.timerId = setInterval(tick, 500);
+
+  // FIX: guard — nếu tick() sync vừa submitSession (state.session = null),
+  // không được tạo interval hay set state.session.timerId (gây crash)
+  if (state.session !== sessionRef || sessionRef.submitted) return;
+  if (!state.session) return;
+
+  activeExamTimerId = setInterval(tick, 500);
+  state.session.timerId = activeExamTimerId;
 }
 
 function stopExamTimer() {
-  if (state.session && state.session.timerId) {
-    clearInterval(state.session.timerId);
-    state.session.timerId = null;
+  if (activeExamTimerId !== null) {
+    clearInterval(activeExamTimerId);
+    activeExamTimerId = null;
   }
-}
-
-function discardSession() {
-  stopExamTimer();
-  state.session = null;
-  state.currentQuestionIndex = 0;
-  state.fillBlankSelection = {};
+  if (state.session) state.session.timerId = null;
 }
 
 function submitSession(reason) {
   if (!state.session || state.session.submitted) return;
   state.session.submitted = true;
   stopExamTimer();
+  // FIX: đóng modal confirmExit nếu đang mở (tránh đè lên summary)
+  closeModal();
   if (store.soundEnabled) SoundFX.complete();
 
   const exam = state.session.examSnapshot;
@@ -2842,7 +2864,6 @@ function renderChart(chartConfig) {
     return wrap;
   }
 
-  // Plugin tự viết để hiển thị số liệu trên từng miếng bánh
   const dataLabelsPlugin = {
     id: "dataLabelsPlugin",
     afterDatasetsDraw(chart) {
@@ -2852,34 +2873,26 @@ function renderChart(chartConfig) {
       meta.data.forEach((element, index) => {
         const data = chart.data.datasets[0].data[index];
         if (data === undefined || data === null) return;
-
         const position = element.tooltipPosition();
-        ctx.fillStyle = "#ffffff"; // Màu chữ trắng
-        // Đổ bóng cho chữ đen để dễ đọc trên nền sáng
+        ctx.fillStyle = "#ffffff";
         ctx.shadowColor = "rgba(0,0,0,0.8)";
         ctx.shadowBlur = 3;
         ctx.shadowOffsetX = 1;
         ctx.shadowOffsetY = 1;
-
         ctx.font = "bold 13px sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-
-        // Hiển thị số kèm dấu %
-        const text = data + "%";
-        ctx.fillText(text, position.x, position.y);
+        ctx.fillText(data + "%", position.x, position.y);
       });
       ctx.restore();
     },
   };
 
-  // --- HỖ TRỢ VẼ 2 BIỂU ĐỒ TRÒN CẠNH NHAU ---
   if (chartConfig.type === "pie-multi") {
     const wrap = el("div", {
       style:
         "width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; position: relative;",
     });
-
     if (chartConfig.title) {
       wrap.appendChild(
         el("div", {
@@ -2889,18 +2902,15 @@ function renderChart(chartConfig) {
         }),
       );
     }
-
     const chartWrapper = el("div", {
       style:
         "display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; width: 100%;",
     });
-
     chartConfig.charts.forEach((subChart) => {
       const chartDiv = el("div", {
         style:
           "flex: 1; min-width: 250px; max-width: 280px; text-align: center;",
       });
-
       if (subChart.title) {
         chartDiv.appendChild(
           el("div", {
@@ -2909,16 +2919,13 @@ function renderChart(chartConfig) {
           }),
         );
       }
-
       const canvasWrap = el("div", {
         style: "position: relative; height: 220px; width: 100%;",
       });
       const canvas = el("canvas");
       canvasWrap.appendChild(canvas);
       chartDiv.appendChild(canvasWrap);
-
       chartWrapper.appendChild(chartDiv);
-
       setTimeout(() => {
         if (!canvas.isConnected) return;
         try {
@@ -2931,11 +2938,10 @@ function renderChart(chartConfig) {
               plugins: {
                 legend: { display: false },
                 tooltip: { enabled: true },
-                // Kích hoạt plugin tự viết ở đây
                 dataLabelsPlugin: true,
               },
             },
-            plugins: [dataLabelsPlugin], // Đăng ký plugin
+            plugins: [dataLabelsPlugin],
           });
           chartInstances["chart-" + generateId()] = chart;
         } catch (err) {
@@ -2944,7 +2950,6 @@ function renderChart(chartConfig) {
       }, 0);
     });
     wrap.appendChild(chartWrapper);
-
     if (chartConfig.charts.length > 0 && chartConfig.charts[0].labels) {
       const legendContainer = el("div", {
         style:
@@ -2967,9 +2972,7 @@ function renderChart(chartConfig) {
     }
     return wrap;
   }
-  // -------------------------------------------
 
-  // Logic vẽ biểu đồ đơn cũ (giữ nguyên)
   const wrap = el("div", { class: "chart-container" });
   const canvas = el("canvas");
   wrap.appendChild(canvas);
@@ -3003,7 +3006,7 @@ function renderChart(chartConfig) {
           datasets: chartConfig.datasets || [],
         },
         options,
-        plugins: [dataLabelsPlugin], // Đăng ký plugin cho cả biểu đồ đơn
+        plugins: [dataLabelsPlugin],
       });
       chartInstances["chart-" + generateId()] = chart;
     } catch (err) {
@@ -3512,23 +3515,43 @@ function continueToNext() {
   } else submitSession("manual");
 }
 
+/* FIX: Hàm thoát an toàn — luôn về home dù có lỗi gì */
+function forceExitToHome() {
+  try {
+    closeModal();
+  } catch (_) {}
+  try {
+    stopExamTimer();
+  } catch (_) {}
+  state.session = null;
+  state.currentQuestionIndex = 0;
+  state.fillBlankSelection = {};
+  state.currentSubject = null;
+  state.currentChapter = null;
+  state.currentExam = null;
+  state.lastRecord = null;
+  state.summaryFromHistory = false;
+  state.view = "home";
+  try {
+    render();
+  } catch (err) {
+    console.error("Render home failed:", err);
+    window.location.reload();
+  }
+}
+
 function confirmExitSession() {
-  if (!state.session) return;
+  // Nếu session đã submit hoặc null → thoát ngay không cần hỏi
+  if (!state.session || state.session.submitted) {
+    forceExitToHome();
+    return;
+  }
   showModal({
     title: "Thoát bài làm?",
     body: "Bài làm hiện tại sẽ bị hủy và không được lưu vào lịch sử. Bạn có chắc chắn muốn thoát?",
     buttons: [
       { label: "Tiếp tục làm bài", variant: "primary", onClick: closeModal },
-      {
-        label: "Thoát",
-        variant: "danger",
-        onClick: () => {
-          closeModal();
-          discardSession();
-          state.view = "home";
-          render();
-        },
-      },
+      { label: "Thoát", variant: "danger", onClick: forceExitToHome },
     ],
   });
 }
@@ -3589,7 +3612,7 @@ function renderExam() {
   wrap.appendChild(bottomActions);
   setTimeout(() => {
     updateExamProgress();
-    if (state.session && state.session.timeLimitMs) startExamTimer();
+    // Không gọi startExamTimer ở đây — startSession đã gọi
   }, 0);
   return wrap;
 }
@@ -3641,10 +3664,7 @@ function renderSummary() {
       type: "button",
       text: "Về trang chủ",
     });
-    back.addEventListener("click", () => {
-      state.view = "home";
-      render();
-    });
+    back.addEventListener("click", forceExitToHome);
     c.appendChild(back);
     return c;
   }
@@ -3712,12 +3732,7 @@ function renderSummary() {
     type: "button",
     text: "Thoát",
   });
-  btnExit.addEventListener("click", () => {
-    state.lastRecord = null;
-    state.summaryFromHistory = false;
-    state.view = "home";
-    render();
-  });
+  btnExit.addEventListener("click", forceExitToHome);
   actions.appendChild(btnExit);
   c.appendChild(actions);
   return c;
@@ -4598,7 +4613,7 @@ function applyTheme() {
     store.theme === "dark" ? "dark" : "light";
 }
 
-/* ====== GUARD ====== */
+/* ====== GUARD ĐIỀU HƯỚNG ====== */
 function navigateTo(view) {
   if (state.session && !state.session.submitted) {
     showModal({
@@ -4610,15 +4625,29 @@ function navigateTo(view) {
           label: "Thoát",
           variant: "danger",
           onClick: () => {
-            closeModal();
-            discardSession();
-            state.view = view;
             if (view === "home") {
+              forceExitToHome();
+            } else {
+              try {
+                closeModal();
+              } catch (_) {}
+              try {
+                stopExamTimer();
+              } catch (_) {}
+              state.session = null;
+              state.currentQuestionIndex = 0;
+              state.fillBlankSelection = {};
               state.currentSubject = null;
               state.currentChapter = null;
               state.currentExam = null;
+              state.view = view;
+              try {
+                render();
+              } catch (err) {
+                console.error("Render failed:", err);
+                window.location.reload();
+              }
             }
-            render();
           },
         },
       ],
@@ -4653,25 +4682,16 @@ function bindGlobalEvents() {
 
     const tgt = e.target;
     if (!tgt) return;
-
-    // Cho phép xuống dòng trong textarea (dự phòng)
     if (tgt.tagName === "TEXTAREA") return;
-
-    // Nếu focus ở nút HÀNH ĐỘNG CHÍNH (class "btn": Kiểm tra / Tiếp tục / Thoát / Nộp bài)
-    // → để trình duyệt tự trigger click native, không can thiệp.
     if (tgt.tagName === "BUTTON" && tgt.classList.contains("btn")) return;
 
-    // Còn lại: focus ở body, ở ô input, hoặc ở nút chọn đáp án (.option, .tf-btn,
-    // .fill-option, .fill-blank, .keypad-btn) → Enter xử lý theo trạng thái câu.
     e.preventDefault();
     const q = getCurrentPracticeQuestion();
     if (!q) return;
 
     if (!state.session.checkedQuestions.has(q.id)) {
-      // Chưa kiểm tra → Enter = nút "Kiểm tra"
       checkCurrentQuestion();
     } else {
-      // Đã kiểm tra → Enter = nút "Tiếp tục" / "Xem kết quả"
       continueToNext();
     }
   });
