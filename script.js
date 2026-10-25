@@ -170,6 +170,7 @@ const ICONS = {
   award: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>`,
   clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
   chart: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>`,
+  shuffle: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>`,
 };
 
 const SUBJECT_ICON_MAP = {
@@ -3461,7 +3462,7 @@ const QUESTION_BANK = [
                 content:
                   "Năm 2021 tổng GDP Ca-na-đa là 1990,8 tỉ USD, dân số 37 triệu người. Tính GDP/người Ca-na-đa năm 2021 (Làm tròn kết quả đến hàng đơn vị của nghìn USD).",
                 answer: "5381",
-                acceptedAnswers: ["5381"],
+                acceptedAnswers: ["53,8"],
                 maxLength: 4,
                 score: 0.5,
                 explanation:
@@ -4041,6 +4042,7 @@ let store = {
   currentProfileId: null,
   theme: "light",
   soundEnabled: true,
+  shuffleOptions: true,
   history: {},
 };
 
@@ -4057,6 +4059,8 @@ function loadStore() {
     store.theme = parsed.theme === "dark" ? "dark" : "light";
     store.soundEnabled =
       typeof parsed.soundEnabled === "boolean" ? parsed.soundEnabled : true;
+    store.shuffleOptions =
+      typeof parsed.shuffleOptions === "boolean" ? parsed.shuffleOptions : true;
     store.history =
       parsed.history && typeof parsed.history === "object"
         ? parsed.history
@@ -4077,6 +4081,7 @@ function loadStore() {
       currentProfileId: null,
       theme: "light",
       soundEnabled: true,
+      shuffleOptions: true,
       history: {},
     };
     showToast("Dữ liệu lưu trữ bị lỗi, đã đặt lại mặc định.");
@@ -4263,20 +4268,31 @@ function createExamSnapshot(exam) {
     duration: exam.duration || null,
     questions: [],
   };
-  const groups = {};
-  for (const q of exam.questions || []) {
-    const t = q.type;
-    if (!groups[t]) groups[t] = [];
-    groups[t].push(q);
+  const globalShuffle = store.shuffleOptions !== false;
+  let ordered;
+
+  if (globalShuffle) {
+    // Chế độ BẬT: gom nhóm theo loại + xáo trộn (giữ nguyên hành vi cũ)
+    const groups = {};
+    for (const q of exam.questions || []) {
+      const t = q.type;
+      if (!groups[t]) groups[t] = [];
+      groups[t].push(q);
+    }
+    const sortedTypes = Object.keys(groups).sort(
+      (a, b) => (QUESTION_TYPE_ORDER[a] || 99) - (QUESTION_TYPE_ORDER[b] || 99),
+    );
+    ordered = [];
+    for (const t of sortedTypes) ordered.push(...shuffle(groups[t]));
+  } else {
+    // Chế độ TẮT: giữ nguyên thứ tự câu hỏi y như trong QUESTION_BANK
+    ordered = (exam.questions || []).slice();
   }
-  const sortedTypes = Object.keys(groups).sort(
-    (a, b) => (QUESTION_TYPE_ORDER[a] || 99) - (QUESTION_TYPE_ORDER[b] || 99),
-  );
-  const ordered = [];
-  for (const t of sortedTypes) ordered.push(...shuffle(groups[t]));
+
   for (const q of ordered) {
     const copy = deepClone(q);
     if (
+      globalShuffle &&
       (q.type === "multiple-choice" || q.type === "fill-blank") &&
       q.shuffleOptions !== false &&
       Array.isArray(copy.options)
@@ -4835,6 +4851,25 @@ function openSettingsModal() {
         store.theme = on ? "dark" : "light";
         saveStore();
         applyTheme();
+      },
+    }),
+  );
+  body.appendChild(
+    createSettingsRow({
+      label: "Xáo trộn đáp án",
+      description:
+        "Khi bật, thứ tự các lựa chọn A/B/C/D sẽ được xáo ngẫu nhiên mỗi lần làm bài. Khi tắt, giữ nguyên thứ tự như trong kho đề.",
+      checked: store.shuffleOptions !== false,
+      initialIcon: "shuffle",
+      getIcon: () => "shuffle",
+      onToggle: (on) => {
+        store.shuffleOptions = on;
+        saveStore();
+        showToast(
+          on
+            ? "Đã bật xáo trộn đáp án cho các lượt làm bài mới."
+            : "Đã tắt xáo trộn đáp án — đề sẽ hiển thị đúng thứ tự gốc.",
+        );
       },
     }),
   );
