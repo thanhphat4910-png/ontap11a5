@@ -189,75 +189,7 @@ const QUESTION_BANK = [
   {
     id: "toan",
     name: "Toán",
-    chapters: [
-      {
-        id: "toan-c1",
-        name: "Kiểm tra 15 phút",
-        exams: [
-          {
-            id: "toan-15p-1",
-            title: "Kiểm tra 15 phút — đề test code",
-            examType: "Kiểm tra 15 phút",
-            description:
-              "Đề mẫu gồm 3 câu: trắc nghiệm, đúng-sai và trả lời ngắn.",
-            duration: 15,
-            questions: [
-              {
-                id: "toan-15p-1-q1",
-                type: "multiple-choice",
-                content: "Số nào sau đây là số nguyên tố?",
-                options: [
-                  { id: "o1", text: "2" },
-                  { id: "o2", text: "4" },
-                  { id: "o3", text: "6" },
-                  { id: "o4", text: "8" },
-                ],
-                correctOptionId: "o1",
-                shuffleOptions: true,
-                score: 0.25,
-                explanation:
-                  "Số nguyên tố là số tự nhiên lớn hơn 1, chỉ có hai ước là 1 và chính nó. Trong các số trên, chỉ có 2 là số nguyên tố.",
-              },
-              {
-                id: "toan-15p-1-q2",
-                type: "true-false",
-                content: "Chọn Đúng hoặc Sai cho mỗi phát biểu sau:",
-                statements: [
-                  { id: "a", text: "Số 2 là số nguyên tố.", correct: true },
-                  { id: "b", text: "Số 1 là hợp số.", correct: false },
-                  {
-                    id: "c",
-                    text: "Phương trình $x - 1 = 0$ vô nghiệm.",
-                    correct: false,
-                  },
-                  {
-                    id: "d",
-                    text: "Trong tam giác vuông, bình phương cạnh huyền bằng tổng hai cạnh góc vuông.",
-                    correct: false,
-                  },
-                ],
-                score: 1,
-                explanation:
-                  "a) Đúng. b) Sai. c) Sai — có nghiệm x = 1. d) Sai — phải là TỔNG BÌNH PHƯƠNG hai cạnh góc vuông.",
-              },
-              {
-                id: "toan-15p-1-q3",
-                type: "short-answer",
-                content:
-                  "Giá trị của nghiệm âm của phương trình $x^2 - 3 = 0$ (làm tròn đến hàng phần mười) là:",
-                answer: "-1,7",
-                acceptedAnswers: ["-1,7", "-1.7"],
-                maxLength: 4,
-                score: 0.5,
-                explanation:
-                  "$x^2 - 3 = 0 \\Rightarrow x = \\pm\\sqrt{3}$. Nghiệm âm là $-\\sqrt{3} \\approx -1,7$.",
-              },
-            ],
-          },
-          //==== ktrtest===
-        ],
-      },
-    ],
+    chapters: [],
   },
   //======= vật lý ==============
   { id: "vat-ly", name: "Vật lý", chapters: [] },
@@ -268,48 +200,1864 @@ const QUESTION_BANK = [
   //======= Tin học ==============
   { id: "tin-hoc", name: "Tin học", chapters: [] },
   //======= Lịch sử ==============
-  { id: "lich-su", name: "Lịch sử", chapters: [] },
+  //======= Lịch sử ==============
+  {
+    id: "lich-su",
+    name: "Lịch sử",
+    chapters: [
+      {
+        id: "lichsugiuaky-ontap-b1",
+        name: "Ôn kiểm tra giữa kỳ I bài 1",
+        exams: [
+          {
+            id: "lichsugiuaky-ontap-b1-exam",
+            title: "Đề cương ôn tập giữa kì I môn Lịch sử lớp 11 (Bài 1)",
+            examType: "Giữa kì I",
+            description:
+              "Đề cương ôn tập giữa kì I — Bài 1: Một số vấn đề chung về cách mạng tư sản.",
+            duration: 45,
+            questions: [
+              {
+                id: "lichsugiuaky-ontap-b1-q1",
+                type: "multiple-choice",
+                content:
+                  "Nội dung nào sau đây là mục tiêu chung của các cuộc cách mạng tư sản?",
+                options: [
+                  { id: "a", text: "Thiết lập chế độ quân chủ chuyên chế." },
+                  {
+                    id: "b",
+                    text: "Xoá bỏ những rào cản kìm hãm sự phát triển của chủ nghĩa tư bản.",
+                  },
+                  { id: "c", text: "Duy trì nền kinh tế nông nghiệp lạc hậu." },
+                  {
+                    id: "d",
+                    text: "Bảo vệ quyền lợi tuyệt đối cho tầng lớp tăng lữ.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q2",
+                type: "multiple-choice",
+                content:
+                  "Giai cấp nào sau đây đóng vai trò lãnh đạo trong cuộc Cách mạng tư sản Anh?",
+                options: [
+                  { id: "a", text: "Giai cấp tư sản và Quý tộc mới." },
+                  { id: "b", text: "Giai cấp công nhân và nông dân." },
+                  { id: "c", text: "Tầng lớp chủ nô và nô lệ." },
+                  { id: "d", text: "Tầng lớp tăng lữ và quý tộc phong kiến." },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q3",
+                type: "multiple-choice",
+                content:
+                  "Một trong những tiền đề về tư tưởng của Cách mạng tư sản Pháp là gì?",
+                options: [
+                  { id: "a", text: "Triết học Ánh sáng." },
+                  { id: "b", text: "Thanh giáo." },
+                  { id: "c", text: "Đạo Tin Lành." },
+                  { id: "d", text: "Nho giáo." },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q4",
+                type: "multiple-choice",
+                content:
+                  "Nhiệm vụ dân chủ của các cuộc cách mạng tư sản nhằm hướng tới việc gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Giải phóng dân tộc khỏi ách thống trị của thực dân.",
+                  },
+                  {
+                    id: "b",
+                    text: "Xoá bỏ chế độ phong kiến chuyên chế, xác lập nền dân chủ tư sản.",
+                  },
+                  { id: "c", text: "Thống nhất thị trường dân tộc." },
+                  {
+                    id: "d",
+                    text: "Thiết lập chế độ cai trị độc đoán của nhà vua.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q5",
+                type: "multiple-choice",
+                content:
+                  "Động lực của các cuộc cách mạng tư sản bao gồm những lực lượng nào?",
+                options: [
+                  { id: "a", text: "Chỉ có giai cấp tư sản." },
+                  { id: "b", text: "Chỉ có tầng lớp quý tộc." },
+                  {
+                    id: "c",
+                    text: "Giai cấp lãnh đạo và quần chúng nhân dân.",
+                  },
+                  { id: "d", text: "Các thế lực phản động từ bên ngoài." },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q6",
+                type: "multiple-choice",
+                content:
+                  "Nhân vật nào sau đây là đại diện tiêu biểu của Triết học Ánh sáng Pháp?",
+                options: [
+                  { id: "a", text: "S. Mông-te-xki-ơ." },
+                  { id: "b", text: "Ô-li-vơ Crôm-oen." },
+                  { id: "c", text: "Gióoc-giơ Oa-sinh-tơn." },
+                  { id: "d", text: "Lu-i XVI." },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q7",
+                type: "multiple-choice",
+                content:
+                  "Trong cuộc Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mỹ, lực lượng lãnh đạo là liên minh giữa",
+                options: [
+                  { id: "a", text: "tư sản và quý tộc mới." },
+                  { id: "b", text: "tư sản và chủ nô." },
+                  { id: "c", text: "nông dân và thợ thủ công." },
+                  { id: "d", text: "quý tộc cũ và tăng lữ." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q8",
+                type: "multiple-choice",
+                content: "Kết quả chung của các cuộc cách mạng tư sản là gì?",
+                options: [
+                  { id: "a", text: "Duy trì tình trạng phong kiến cát cứ." },
+                  {
+                    id: "b",
+                    text: "Lật đổ chế độ cũ, thiết lập nhà nước tư sản.",
+                  },
+                  { id: "c", text: "Chế độ quân chủ chuyên chế được củng cố." },
+                  {
+                    id: "d",
+                    text: "Chủ nghĩa xã hội được xác lập trên toàn thế giới.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q9",
+                type: "multiple-choice",
+                content:
+                  "Nội dung nào sau đây phản ánh tiền đề chính trị của các cuộc cách mạng tư sản?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Sự xuất hiện của các công trường thủ công.",
+                  },
+                  {
+                    id: "b",
+                    text: "Chính sách cai trị độc đoán của nhà nước phong kiến hoặc thực dân.",
+                  },
+                  {
+                    id: "c",
+                    text: "Mâu thuẫn giữa nông dân và quý tộc về ruộng đất.",
+                  },
+                  { id: "d", text: "Sự ra đời của Triết học Ánh sáng." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q10",
+                type: "multiple-choice",
+                content:
+                  'Cuộc cách mạng tư sản nào được đánh giá là "cuộc cách mạng vĩ đại", triệt để nhất?',
+                options: [
+                  { id: "a", text: "Cách mạng tư sản Anh." },
+                  { id: "b", text: "Cách mạng tư sản Pháp." },
+                  { id: "c", text: "Chiến tranh giành độc lập ở Bắc Mỹ." },
+                  { id: "d", text: "Thống nhất nước Đức." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q11",
+                type: "multiple-choice",
+                content:
+                  "Trước khi cách mạng bùng nổ, nền nông nghiệp ở Pháp có đặc điểm gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Phát triển theo hướng sản xuất hàng hoá mạnh mẽ.",
+                  },
+                  {
+                    id: "b",
+                    text: "Rất lạc hậu, năng suất thấp, đất đai bỏ hoang nhiều.",
+                  },
+                  {
+                    id: "c",
+                    text: "Đã hoàn toàn xoá bỏ quan hệ sản xuất phong kiến.",
+                  },
+                  {
+                    id: "d",
+                    text: "Là nguồn cung cấp nguyên liệu chính cho toàn thế giới.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q12",
+                type: "multiple-choice",
+                content:
+                  "G. G. Rút-xô, đại diện Triết học Ánh sáng Pháp, chủ trương thành lập chế độ nào?",
+                options: [
+                  { id: "a", text: "Chế độ quân chủ lập hiến." },
+                  { id: "b", text: "Chế độ cộng hoà." },
+                  { id: "c", text: "Chế độ quân chủ chuyên chế." },
+                  { id: "d", text: "Chế độ độc tài quân sự." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q13",
+                type: "multiple-choice",
+                content:
+                  "Cuối thế kỉ XVIII, giai cấp tư sản Pháp cần có hệ tư tưởng mới khi làm cách mạng để",
+                options: [
+                  {
+                    id: "a",
+                    text: "bảo vệ quyền lợi của giai cấp phong kiến.",
+                  },
+                  {
+                    id: "b",
+                    text: "tập hợp quần chúng nhân dân và chống lại hệ tư tưởng phong kiến bảo thủ.",
+                  },
+                  {
+                    id: "c",
+                    text: "duy trì niềm tin vào quyền lực tuyệt đối của nhà vua.",
+                  },
+                  {
+                    id: "d",
+                    text: "ngăn cản sự phát triển của công thương nghiệp.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q14",
+                type: "multiple-choice",
+                content:
+                  "Sự khác biệt giữa nhiệm vụ dân tộc và nhiệm vụ dân chủ trong cách mạng tư sản là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Nhiệm vụ dân tộc tập trung vào việc lật đổ vua, nhiệm vụ dân chủ tập trung vào đánh đuổi ngoại xâm.",
+                  },
+                  {
+                    id: "b",
+                    text: "Nhiệm vụ dân tộc hướng tới thống nhất thị trường hoặc giải phóng dân tộc; nhiệm vụ dân chủ hướng tới xoá bỏ chuyên chế.",
+                  },
+                  {
+                    id: "c",
+                    text: "Hai nhiệm vụ này hoàn toàn khác nhau về mục tiêu cuối cùng.",
+                  },
+                  {
+                    id: "d",
+                    text: "Nhiệm vụ dân tộc chỉ dành cho tầng lớp quý tộc, nhiệm vụ dân chủ dành cho tư sản.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q15",
+                type: "multiple-choice",
+                content:
+                  "Trong Cách mạng tư sản Pháp, quần chúng nhân dân được coi là động lực của cách mạng tư sản vì",
+                options: [
+                  {
+                    id: "a",
+                    text: "họ là lực lượng trực tiếp tham gia đấu tranh, quyết định thắng lợi của cách mạng.",
+                  },
+                  {
+                    id: "b",
+                    text: "họ là những người đề ra hệ tư tưởng cho giai cấp tư sản.",
+                  },
+                  {
+                    id: "c",
+                    text: "họ nắm quyền lãnh đạo tối cao sau khi cách mạng thành công.",
+                  },
+                  {
+                    id: "d",
+                    text: "họ có quyền lợi hoàn toàn thống nhất với giai cấp tư sản trong mọi giai đoạn.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q16",
+                type: "multiple-choice",
+                content:
+                  "Đặc điểm nổi bật của tiền đề kinh tế dẫn đến cách mạng tư sản là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Kinh tế tư bản chủ nghĩa phát triển trong lòng chế độ phong kiến hoặc thuộc địa.",
+                  },
+                  {
+                    id: "b",
+                    text: "Chế độ phong kiến tạo mọi điều kiện thuận lợi cho công thương nghiệp phát triển.",
+                  },
+                  {
+                    id: "c",
+                    text: "Kinh tế nông nghiệp lạc hậu là động lực chính thức thúc đẩy tư sản làm cách mạng.",
+                  },
+                  {
+                    id: "d",
+                    text: "Sự biến mất hoàn toàn của các rào cản thuế quan phong kiến.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q17",
+                type: "multiple-choice",
+                content:
+                  "Quý tộc mới ở Anh khác với quý tộc phong kiến cũ ở điểm nào?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Họ có quyền lực chính trị cao hơn nhà vua.",
+                  },
+                  {
+                    id: "b",
+                    text: "Họ kinh doanh theo phương thức tư bản chủ nghĩa.",
+                  },
+                  { id: "c", text: "Họ kiên quyết bảo vệ giáo hội Anh giáo." },
+                  {
+                    id: "d",
+                    text: "Họ không có mâu thuẫn gì với chế độ quân chủ.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q18",
+                type: "multiple-choice",
+                content:
+                  "Ý nghĩa quan trọng nhất của cuộc Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mỹ là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Thiết lập chế độ quân chủ lập hiến đầu tiên trên thế giới.",
+                  },
+                  {
+                    id: "b",
+                    text: "Giải phóng dân tộc và lập nên nhà nước tư sản đầu tiên ngoài châu Âu.",
+                  },
+                  {
+                    id: "c",
+                    text: "Xoá bỏ hoàn toàn chế độ nô lệ ở miền Nam nước Mỹ.",
+                  },
+                  {
+                    id: "d",
+                    text: "Biến Mỹ thành trung tâm công nghiệp lớn nhất châu Âu.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q19",
+                type: "multiple-choice",
+                content:
+                  "Triết học Ánh sáng Pháp có vai trò gì đối với Cách mạng tư sản Pháp?",
+                options: [
+                  {
+                    id: "a",
+                    text: 'Là "ngọn cờ" tôn giáo để tập hợp quần chúng.',
+                  },
+                  {
+                    id: "b",
+                    text: "Là nền tảng lý luận và vũ khí tư tưởng chuẩn bị cho cuộc cách mạng.",
+                  },
+                  {
+                    id: "c",
+                    text: "Là công cụ để nhà vua xoa dịu sự phẫn nộ của dân nghèo.",
+                  },
+                  {
+                    id: "d",
+                    text: "Là phương tiện để duy trì trật tự xã hội cũ.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q20",
+                type: "multiple-choice",
+                content:
+                  'Cách mạng tư sản Anh thế kỉ XVII mượn ngọn cờ "Thanh giáo" vì',
+                options: [
+                  {
+                    id: "a",
+                    text: "giai cấp tư sản chưa có hệ tư tưởng riêng để tập hợp quần chúng.",
+                  },
+                  {
+                    id: "b",
+                    text: "Thanh giáo ủng hộ quyền lực tuyệt đối của nhà vua.",
+                  },
+                  {
+                    id: "c",
+                    text: "Thanh giáo là tôn giáo chính thống của nhà nước Anh.",
+                  },
+                  {
+                    id: "d",
+                    text: "Thanh giáo giúp duy trì các đặc quyền của quý tộc cũ.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q21",
+                type: "multiple-choice",
+                content:
+                  "Mâu thuẫn bao trùm trong xã hội Pháp trước cách mạng là mâu thuẫn giữa",
+                options: [
+                  { id: "a", text: "giai cấp tư sản với giai cấp công nhân." },
+                  {
+                    id: "b",
+                    text: "Đẳng cấp thứ ba với các đẳng cấp đặc quyền (Tăng lữ, Quý tộc).",
+                  },
+                  { id: "c", text: "các nước đế quốc với nhân dân thuộc địa." },
+                  { id: "d", text: "thợ thủ công với các chủ xưởng." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q22",
+                type: "multiple-choice",
+                content:
+                  "Nhận xét nào sau đây là đúng về tính chất của các cuộc cách mạng tư sản?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Là những cuộc cách mạng triệt để, xoá bỏ mọi sự áp bức trong xã hội.",
+                  },
+                  {
+                    id: "b",
+                    text: "Là những cuộc cách mạng nhằm thay thế hình thức bóc lột này bằng hình thức bóc lột khác.",
+                  },
+                  {
+                    id: "c",
+                    text: "Là những cuộc cách mạng chỉ mang lại lợi ích cho tầng lớp nông dân.",
+                  },
+                  {
+                    id: "d",
+                    text: "Là những cuộc cách mạng không làm thay đổi bản chất của chế độ phong kiến.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q23",
+                type: "multiple-choice",
+                content:
+                  "Từ kết quả của các cuộc cách mạng tư sản, có thể rút ra bài học gì về vai trò của lãnh đạo?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Cách mạng chỉ thành công khi có sự lãnh đạo của các thế lực phong kiến.",
+                  },
+                  {
+                    id: "b",
+                    text: "Giai cấp lãnh đạo phải đại diện cho phương thức sản xuất tiến bộ và biết tập hợp quần chúng.",
+                  },
+                  {
+                    id: "c",
+                    text: "Lãnh đạo không quan trọng bằng sức mạnh vũ khí.",
+                  },
+                  {
+                    id: "d",
+                    text: "Giai cấp tư sản luôn là lãnh đạo duy nhất và tuyệt đối trong mọi cuộc cách mạng.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q24",
+                type: "multiple-choice",
+                content:
+                  "Điểm chung về nhiệm vụ giữa Cách mạng tư sản Pháp và Chiến tranh giành độc lập ở Bắc Mỹ là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Đều nhằm mục tiêu giải phóng dân tộc khỏi ách thống trị thực dân.",
+                  },
+                  {
+                    id: "b",
+                    text: "Đều nhằm lật đổ chế độ quân chủ chuyên chế trong nước.",
+                  },
+                  {
+                    id: "c",
+                    text: "Đều mở đường cho chủ nghĩa tư bản phát triển.",
+                  },
+                  {
+                    id: "d",
+                    text: "Đều thiết lập chế độ cộng hoà ngay sau khi cách mạng bùng nổ.",
+                  },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q25",
+                type: "multiple-choice",
+                content:
+                  'Cách mạng tư sản Pháp cuối thế kỉ XVIII là một cuộc "cách mạng vĩ đại" vì',
+                options: [
+                  {
+                    id: "a",
+                    text: "diễn ra trong thời gian dài nhất lịch sử.",
+                  },
+                  {
+                    id: "b",
+                    text: "giải quyết triệt để các nhiệm vụ dân tộc và dân chủ, có ảnh hưởng quốc tế sâu rộng.",
+                  },
+                  {
+                    id: "c",
+                    text: "không gây ra bất kỳ tổn thất nào về người và của.",
+                  },
+                  {
+                    id: "d",
+                    text: "được lãnh đạo bởi liên minh tư sản và quý tộc mới.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q26",
+                type: "multiple-choice",
+                content:
+                  "Một trong những hạn chế chung của các cuộc cách mạng tư sản là gì?",
+                options: [
+                  { id: "a", text: "Không thiết lập được nhà nước tư sản." },
+                  {
+                    id: "b",
+                    text: "Chưa mang lại quyền lợi thực sự cho đa số quần chúng nhân dân lao động.",
+                  },
+                  {
+                    id: "c",
+                    text: "Ngăn cản sự phát triển của lực lượng sản xuất.",
+                  },
+                  {
+                    id: "d",
+                    text: "Làm cho chế độ phong kiến trở nên vững mạnh hơn.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q27",
+                type: "multiple-choice",
+                content:
+                  "Nội dung nào sau đây phản ánh đúng mối quan hệ giữa kinh tế và chính trị trong các cuộc cách mạng tư sản?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Kinh tế phát triển độc lập, không chịu tác động của chính trị.",
+                  },
+                  {
+                    id: "b",
+                    text: "Sự phát triển kinh tế tư bản chủ nghĩa đòi hỏi phải thay đổi chế độ chính trị phù hợp.",
+                  },
+                  {
+                    id: "c",
+                    text: "Chế độ chính trị phong kiến luôn thúc đẩy kinh tế tư bản chủ nghĩa phát triển.",
+                  },
+                  {
+                    id: "d",
+                    text: "Cách mạng chính trị nổ ra chỉ để giải quyết các vấn đề tôn giáo đơn thuần.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q28",
+                type: "multiple-choice",
+                content:
+                  "Nội dung nào sau đây minh chứng cho tính chất giải phóng dân tộc của Cách mạng tư sản Mỹ?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Lật đổ sự thống trị của thực dân Anh, thành lập quốc gia mới.",
+                  },
+                  {
+                    id: "b",
+                    text: "Xoá bỏ đặc quyền của giáo hội Thiên chúa giáo.",
+                  },
+                  {
+                    id: "c",
+                    text: "Ban hành Hiến pháp xác lập quyền bầu cử cho mọi người dân.",
+                  },
+                  {
+                    id: "d",
+                    text: "Tịch thu toàn bộ ruộng đất của các chủ nô miền Nam.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q29",
+                type: "multiple-choice",
+                content:
+                  "Điểm tương đồng giữa tư tưởng của Mông-te-xki-ơ và Vôn-te là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Đều muốn duy trì nguyên vẹn quyền lực của nhà vua phong kiến.",
+                  },
+                  {
+                    id: "b",
+                    text: "Đều hướng tới việc bảo vệ quyền tự do và tư hữu của công dân.",
+                  },
+                  {
+                    id: "c",
+                    text: "Đều chủ trương xoá bỏ triệt để mọi hình thức nhà nước.",
+                  },
+                  {
+                    id: "d",
+                    text: "Đều coi tôn giáo là nền tảng duy nhất của xã hội.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q30",
+                type: "multiple-choice",
+                content:
+                  "Sự kiện quần chúng Pháp phá ngục Ba-xti mang biểu tượng gì cho các cuộc cách mạng tư sản sau này?",
+                options: [
+                  { id: "a", text: "Sức mạnh của quân đội chuyên nghiệp." },
+                  {
+                    id: "b",
+                    text: "Tinh thần đoàn kết quốc tế của giai cấp tư sản.",
+                  },
+                  {
+                    id: "c",
+                    text: "Sức mạnh của quần chúng nhân dân trong việc lật đổ chế độ độc tài, áp bức.",
+                  },
+                  {
+                    id: "d",
+                    text: "Sự sụp đổ của nền kinh tế công thương nghiệp.",
+                  },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              //====ds====
+              {
+                id: "lichsugiuaky-ontap-b1-q31",
+                type: "true-false",
+                content:
+                  "Đọc đoạn tư liệu sau đây: Tư liệu 1: “Tất cả mọi người sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”. (Tuyên ngôn Độc lập của Mỹ năm 1776). Tư liệu 2: “Điều 1. Con người sinh ra đều có quyền tự do và bình đẳng. Những sự phân biệt xã hội chỉ có thể dựa trên lợi ích chung. Điều 17. Quyền tư hữu là quyền bất khả xâm phạm và thiêng liêng không ai có thể bị tước bỏ”. (Tuyên ngôn Nhân quyền và Dân quyền (Pháp), năm 1789)",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Bản Tuyên ngôn Nhân quyền và Dân quyền ra đời từ cuộc cách mạng tư sản Pháp cuối thế kỉ XVIII.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Điểm chung của Tuyên ngôn Độc lập của nước Mĩ và Tuyên ngôn Nhân quyền và Dân quyền của nước Pháp là đề cao quyền con người và quyền công dân.",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: "Bản Tuyên ngôn Nhân quyền và Dân quyền của nước Pháp năm 1789 không đề cao quyền tư hữu cá nhân vì đó là biểu hiện cho sự phân biệt giàu - nghèo trong xã hội.",
+                    correct: false,
+                  },
+                  {
+                    id: "d",
+                    text: "Trong Tuyên ngôn Độc lập của nước Việt Nam Dân chủ Cộng hòa (2/9/1945), Chủ tịch Hồ Chí Minh đã trích dẫn những câu nói nổi tiếng trong bản Tuyên ngôn Độc lập của nước Mĩ và Tuyên ngôn Nhân quyền và Dân quyền của nước Pháp.",
+                    correct: true,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q32",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau đây: “Các cuộc cách mạng tư sản có hai nhiệm vụ cơ bản là dân tộc và dân chủ. Nhiệm vụ dân tộc là xoá bỏ tình trạng phong kiến cát cứ, đánh đuổi thực dân, giải phóng dân tộc, thống nhất thị trường, tạo thành một quốc gia dân tộc gồm đầy đủ bốn yếu tố: lãnh thổ chung, ngôn ngữ chung, nền văn hóa chung và nền kinh tế chung. Nhiệm vụ dân chủ thể hiện thông qua việc xoá bỏ chế độ phong kiến chuyên chế, xác lập nền dân chủ tư sản, mỗi người dân đều có quyền tự do chính trị, tự do kinh doanh và có quyền tư hữu”. (Đỗ Thanh Bình (chủ biên), Sách giáo khoa Lịch sử 11 bộ Cánh diều, NXB Đại học Sư phạm, 2023, tr 9).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Một trong những nhiệm vụ cơ bản của các cuộc cách mạng tư sản là nhiệm vụ dân tộc.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Cách mạng tư sản Pháp đã xoá bỏ chế độ phong kiến chuyên chế, giải quyết vấn đề ruộng đất cho nông dân. Như vậy, cách mạng tư sản Pháp đã thực hiện nhiệm vụ dân chủ.",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: "Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mĩ cuối thế kỉ XVIII chỉ thực hiện nhiệm vụ dân tộc.",
+                    correct: false,
+                  },
+                  {
+                    id: "d",
+                    text: "Cách mạng tư sản Pháp cuối thế kỉ XVIII vừa thực hiện nhiệm vụ dân tộc, vừa thực hiện nhiệm vụ dân chủ.",
+                    correct: true,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q33",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau đây: “Các cuộc cách mạng tư sản đều giành thắng lợi, lật đổ chế độ phong kiến, thực dân và thiết lập chế độ tư bản chủ nghĩa. Do điều kiện lịch sử ở mỗi nước khác nhau nên thắng lợi của các cuộc cách mạng tư sản cũng khác nhau. Cách mạng tư sản Anh đã lật đổ chế độ quân chủ chuyên chế, thiết lập chế độ quân chủ lập hiến. Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mĩ đã lật đổ sự thống trị của thực dân Anh, giành được độc lập dân tộc. Cách mạng tư sản Pháp đã lật đổ chế độ quân chủ chuyên chế, thiết lập chế độ cộng hòa” (Đỗ Thanh Bình (chủ biên), Sách giáo khoa Lịch sử 11 bộ Cánh diều, NXB Đại học Sư phạm, 2023, tr 9).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Mức độ thắng lợi của các cuộc cách mạng tư sản phụ thuộc vào điều kiện lịch sử của mỗi nước.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Sau cuộc cách mạng tư sản thế kỉ XVII, nước Anh thiết lập chế độ Cộng hòa.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Điểm chung của các cuộc cách mạng tư sản là thiết lập chế độ tư bản chủ nghĩa, mở đường cho kinh tế hàng hóa phát triển.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Cách mạng tư sản Anh, Pháp, Mĩ thế kỉ XVII - XVIII đều lật đổ chế độ phong kiến, thiết lập chế độ quân chủ lập hiến.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q34",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau đây: Tình hình chính trị của nước Anh trước cách mạng: “Ở Anh, nhà vua nắm quyền lực tối cao và vô hạn. Vua Anh tôn trọng quyền quyết định của Quốc hội trong xây dựng luật pháp. Vua đứng đầu Giáo hội Anh (Anh giáo), tiền hành đàn áp các tín đồ Thanh giáo (tôn giáo cải cách), lập ra các tòa án để buộc tội những người chống đối” (Vũ Minh Giang (chủ biên), Sách giáo khoa Lịch sử 11 bộ Kết nối tri thức với cuộc sống, NXB Giáo dục Việt Nam, 2023, tr 7).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Ở nước Anh trước cách mạng, nhà vua nắm quyền lực tối cao và vô hạn.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Vua Anh tôn trọng quyền quyết định của Quốc hội trong xây dựng luật pháp.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Ở nước Anh trước cách mạng, diễn ra cuộc đấu tranh trên lĩnh vực tư tưởng giữa Anh giáo và Thanh giáo.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Anh giáo là ngọn cờ tư tưởng tiến bộ của tư sản và quý tộc mới ở Anh nhằm chống lại chế độ phong kiến.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q35",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau đây: “Chiến tranh giành độc lập của 13 thuộc địa của Anh ở Bắc Mĩ đã giải phóng nhân dân bản địa khỏi ách thống trị thực dân, đưa đến sự thành lập nhà nước tư sản đầu tiên ngoài châu Âu, thúc đẩy phong trào giải phóng dân tộc ở khu vực Mĩ Latinh phát triển và có ảnh hưởng tích cực đến phong trào giành độc lập ở nhiều nơi trên thế giới vào cuối thế kỉ XVIII – đầu thế kỉ XIX” (Vũ Minh Giang (chủ biên), Sách giáo khoa Lịch sử 11 bộ Kết nối tri thức với cuộc sống, NXB Giáo dục Việt Nam, 2023, tr 11).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Chiến tranh giành độc lập của 13 thuộc địa của Anh ở Bắc Mĩ đã giải phóng nhân dân bản địa khỏi ách thống trị thực dân, đưa đến sự thành lập nhà nước tư sản đầu tiên ngoài châu Âu.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Chiến tranh giành độc lập của 13 thuộc địa của Anh ở Bắc Mĩ là cuộc cách mạng tư sản vĩ đại và triệt để nhất trong các thế kỉ XVI - XIX.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Chiến tranh giành độc lập của 13 thuộc địa của Anh ở Bắc Mĩ đã lật đổ ách thống trị của thực dân dân, đưa đến sự thành lập nhà nước dân chủ tư sản đầu tiên trên thế giới.",
+                    correct: false,
+                  },
+                  {
+                    id: "d",
+                    text: "Chiến tranh giành độc lập của 13 thuộc địa của Anh ở Bắc Mĩ thắng lợi đã thúc đẩy phong trào đấu tranh giành độc lập ở nhiều nước trên thế giới.",
+                    correct: true,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q36",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau đây: “Hiện tượng “Cừu ăn thịt người” là câu nói của Tô – mát Mo – rơ miêu tả thảm cảnh của người nông dân Anh trong phong trào “rào đất cướp ruộng” cuối thế kỉ XV đầu thế kỉ XVI. Quý tộc mới (quý tộc tư sản hóa) đã đuổi nông dân ra khỏi những mảnh đất mà họ đã từng canh tác để biến thành đồng cỏ nuôi cừu, kinh doanh thu lợi nhuận, tạo ra sự tích lũy tư bản nguyên thủy” (Hà Minh Hồng (chủ biên), Sách giáo khoa Lịch sử 11 bộ Chân trời sáng tạo, NXB Giáo dục Việt Nam, 2023, tr 5).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Cuối thế kỉ XV – đầu thế kỉ XVI, phương thức sản xuất tư bản chủ nghĩa đã thâm nhập mạnh vào nông nghiệp Anh.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Nguyên nhân chủ yếu dẫn đến phong trào “rào đất cướp ruộng” ở Anh là do sự phát triển mạnh mẽ của ngành công nghiệp len dạ.",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: "Sự phát triển của kinh tế tư bản chủ nghĩa trong nông nghiệp làm xuất hiện tầng lớp quý tộc mới, sau đó đã liên minh với tư sản chống lại chế độ phong kiến Anh.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Phong trào “rào đất cướp ruộng” đã góp phần cải thiện đời sống của nông dân Anh trước cách mạng tư sản.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q37",
+                type: "true-false",
+                content:
+                  "Đọc đoạn trích dưới đây và trả lời các ý hỏi: “Vì sao mà Mỹ làm cách mạng? 1. Có bao nhiêu thổ sản, Mỹ phải cung cấp cho Anh hết, không được bán cho nước khác. 2. Dân Mỹ không được lập ra lò máy và hội buôn bán. 3. Các nước không được vào buôn bán với Mỹ, chỉ Anh được buôn bán mà thôi. Vì ba điều ấy, lại thêm thuế má nặng nề, làm cho kinh tế rất khốn đốn...” (Hồ Chí Minh, Toàn tập, Tập 2, NXB Chính trị quốc gia Sự thật, Hà Nội, 2011, tr. 290)",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Đoạn trích trên chỉ ra những tiền đề về chính trị dẫn đến cách mạng Mĩ.",
+                    correct: false,
+                  },
+                  {
+                    id: "b",
+                    text: "Những chính sách của thực dân Anh nhằm kìm hãm sự phát triển kinh tế của 13 thuộc địa ở Bắc Mĩ.",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: 'Theo Hồ Chí Minh, một trong những nguyên nhân khiến dân Mỹ "tẩy chay" Anh là do chính sách thuế má nặng nề.',
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Nội dung đoạn trích cho thấy cách mạng Mỹ nổ ra nhằm mục tiêu giải quyết nhiệm vụ dân chủ là chủ yếu.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b1-q38",
+                type: "true-false",
+                content:
+                  "Đọc đoạn trích dưới đây và trả lời các ý hỏi: “Không phải không có lí do mà cuộc Cách mạng Pháp được gọi là cuộc cách mạng vĩ đại... nó đã phục vụ được nhiều, khiến cho cả thế kỉ XIX, một thế kỉ đã đem lại văn minh và văn hoá cho toàn thể loài người, đã trôi qua dưới dấu hiệu của cuộc Cách mạng Pháp.” (V. I. Lê-nin, Toàn tập, Tập 38, NXB Chính trị quốc gia, Hà Nội, 2006, tr. 444)",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Lê-nin đánh giá cao tầm vóc và ảnh hưởng quốc tế của Cách mạng tư sản Pháp.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Theo đoạn trích, Cách mạng Pháp chỉ có ý nghĩa đối với sự phát triển của riêng nước Pháp trong thế kỉ XIX.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: 'Cách mạng Pháp được gọi là "vĩ đại" vì nó đã đặt nền móng cho nền văn minh và văn hoá của nhân loại trong một thời gian dài.',
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Ý kiến của Lê-nin gián tiếp khẳng định nhiệm vụ dân tộc và dân chủ của Cách mạng Pháp đã được thực hiện một cách triệt để.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "lichsugiuaky-ontap-b2",
+        name: "Ôn tập giữa kì I bài 2",
+        exams: [
+          {
+            id: "lichsugiuaky-ontap-b2-exam",
+            title: "Đề cương ôn tập giữa kì I môn Lịch sử lớp 11 (Bài 2)",
+            examType: "Giữa kì I",
+            description:
+              "Đề cương ôn tập giữa kì I — Bài 2: Sự xác lập và phát triển của chủ nghĩa tư bản.",
+            duration: 45,
+            questions: [
+              {
+                id: "lichsugiuaky-ontap-b2-q1",
+                type: "multiple-choice",
+                content:
+                  "Cuộc cách mạng tư sản nào sau đây đã đánh dấu sự mở rộng của chủ nghĩa tư bản ra ngoài phạm vi châu Âu?",
+                options: [
+                  { id: "a", text: "Cách mạng tư sản Pháp." },
+                  { id: "b", text: "Cách mạng tư sản Anh." },
+                  {
+                    id: "c",
+                    text: "Chiến tranh giành độc lập của các thuộc địa Anh ở Bắc Mỹ.",
+                  },
+                  { id: "d", text: "Cuộc thống nhất nước Đức." },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q2",
+                type: "multiple-choice",
+                content:
+                  "Ở châu Âu, sau cách mạng tư sản Anh, quốc gia nào tiếp theo xác lập chủ nghĩa tư bản thông qua cách mạng?",
+                options: [
+                  { id: "a", text: "Đức." },
+                  { id: "b", text: "Pháp." },
+                  { id: "c", text: "I-ta-li-a." },
+                  { id: "d", text: "Hà Lan." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q3",
+                type: "multiple-choice",
+                content:
+                  "Sự thắng lợi của cuộc cách mạng nào sau đây đã khẳng định sự xác lập của chủ nghĩa tư bản ở các nước I-ta-li-a và Đức?",
+                options: [
+                  { id: "a", text: "Cách mạng công nghiệp." },
+                  { id: "b", text: "Các cuộc đấu tranh thống nhất đất nước." },
+                  { id: "c", text: "Các cuộc cải cách nông nô." },
+                  { id: "d", text: "Cuộc Duy tân Minh Trị." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q4",
+                type: "multiple-choice",
+                content:
+                  "Cuối thế kỉ XIX - đầu thế kỉ XX, các nước tư bản chuyển sang giai đoạn nào sau đây?",
+                options: [
+                  { id: "a", text: "Chủ nghĩa tư bản hiện đại." },
+                  { id: "b", text: "Chủ nghĩa đế quốc." },
+                  { id: "c", text: "Chủ nghĩa tư bản tự do cạnh tranh." },
+                  { id: "d", text: "Thời kì xác lập chủ nghĩa tư bản." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q5",
+                type: "multiple-choice",
+                content:
+                  "Theo V. I. Lê-nin, đặc điểm nổi bật của chủ nghĩa tư bản ở giai đoạn sau cùng là sự xuất hiện của",
+                options: [
+                  { id: "a", text: "các công trường thủ công." },
+                  { id: "b", text: "các tổ chức độc quyền." },
+                  { id: "c", text: "tầng lớp quý tộc mới." },
+                  { id: "d", text: "các phường hội kinh doanh." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q6",
+                type: "multiple-choice",
+                content:
+                  "Hình thức tổ chức độc quyền phổ biến ở nước Mỹ được gọi là gì?",
+                options: [
+                  { id: "a", text: "Các-ten (Cartel)." },
+                  { id: "b", text: "Xanh-đi-ca (Syndicate)." },
+                  { id: "c", text: "Tơ-rốt (Trust)." },
+                  { id: "d", text: "Phường hội." },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q7",
+                type: "multiple-choice",
+                content:
+                  "Cuộc cải cách nào đã đưa Nhật Bản từ một nước phong kiến trở thành nước tư bản chủ nghĩa?",
+                options: [
+                  { id: "a", text: "Cách mạng Tân Hợi." },
+                  { id: "b", text: "Duy tân Minh Trị." },
+                  { id: "c", text: "Cải cách Ra-ma V." },
+                  { id: "d", text: "Cuộc vận động Duy tân." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q8",
+                type: "multiple-choice",
+                content:
+                  "Cuộc cách mạng nào ở châu Á đã lật đổ triều đại Mãn Thanh, mở đường cho chủ nghĩa tư bản phát triển?",
+                options: [
+                  { id: "a", text: "Cách mạng Tân Hợi." },
+                  { id: "b", text: "Cách mạng tháng Mười." },
+                  { id: "c", text: "Phong trào Nghĩa Hòa đoàn." },
+                  { id: "d", text: "Cuộc khởi nghĩa Thái bình Thiên quốc." },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q9",
+                type: "multiple-choice",
+                content:
+                  "Chủ nghĩa tư bản hiện đại được xác định bắt đầu từ thời điểm nào?",
+                options: [
+                  { id: "a", text: "Sau Cách mạng Pháp." },
+                  { id: "b", text: "Sau Cách mạng công nghiệp." },
+                  { id: "c", text: "Sau Chiến tranh thế giới thứ hai." },
+                  { id: "d", text: "Sau khi Liên Xô sụp đổ." },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q10",
+                type: "multiple-choice",
+                content:
+                  "Một trong những biểu hiện mới của chủ nghĩa tư bản hiện đại là sự kết hợp giữa",
+                options: [
+                  {
+                    id: "a",
+                    text: "sức mạnh kinh tế của tổ chức độc quyền với sức mạnh chính trị của nhà nước.",
+                  },
+                  { id: "b", text: "giai cấp tư sản với giai cấp công nhân." },
+                  {
+                    id: "c",
+                    text: "các nước tư bản với các nước xã hội chủ nghĩa.",
+                  },
+                  {
+                    id: "d",
+                    text: "kinh tế nông nghiệp với kinh tế công nghiệp.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q11",
+                type: "multiple-choice",
+                content:
+                  "Nhóm các quốc gia nào sau đây được coi là diễn đàn kinh tế của các quốc gia tư bản phát triển nhất thế giới?",
+                options: [
+                  { id: "a", text: "ASEAN." },
+                  { id: "b", text: "G7." },
+                  { id: "c", text: "BRICS." },
+                  { id: "d", text: "EU." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q12",
+                type: "multiple-choice",
+                content:
+                  "Tiềm năng của chủ nghĩa tư bản hiện đại được thể hiện rõ nhất ở lĩnh vực nào dưới đây?",
+                options: [
+                  { id: "a", text: "Khoa học - công nghệ." },
+                  { id: "b", text: "Sản xuất nông nghiệp lạc hậu." },
+                  { id: "c", text: "Chế độ quân chủ chuyên chế." },
+                  { id: "d", text: "Nền kinh tế bao cấp." },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q13",
+                type: "multiple-choice",
+                content:
+                  "Thách thức lớn nhất mà chủ nghĩa tư bản hiện đại đang phải đối mặt trong lĩnh vực kinh tế là",
+                options: [
+                  { id: "a", text: "thiếu hụt lao động trình độ cao." },
+                  {
+                    id: "b",
+                    text: "các cuộc khủng hoảng tài chính mang tính toàn cầu.",
+                  },
+                  { id: "c", text: "sự biến mất của các tổ chức độc quyền." },
+                  { id: "d", text: "sự dư thừa năng lượng sạch." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q14",
+                type: "multiple-choice",
+                content:
+                  'Phong trào "Chiếm lấy phố Uôn" nổ ra tại Mỹ nhằm phản đối vấn đề gì?',
+                options: [
+                  { id: "a", text: "Chống biến đổi khí hậu." },
+                  {
+                    id: "b",
+                    text: "Sự bất bình đẳng và chênh lệch giàu nghèo.",
+                  },
+                  { id: "c", text: "Sự phát triển của khoa học kĩ thuật." },
+                  { id: "d", text: "Các cuộc chiến tranh xâm lược thuộc địa." },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q15",
+                type: "multiple-choice",
+                content:
+                  "Nội dung nào sau đây phản ánh đúng bản chất của chủ nghĩa đế quốc?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Là sự mở rộng quyền lực thông qua việc xâm chiếm và thống trị các vùng đất khác.",
+                  },
+                  {
+                    id: "b",
+                    text: "Là quá trình các nước tư bản giúp đỡ các nước nghèo phát triển kinh tế.",
+                  },
+                  {
+                    id: "c",
+                    text: "Là việc xây dựng một thế giới hòa bình, không có chiến tranh thuộc địa.",
+                  },
+                  {
+                    id: "d",
+                    text: "Là sự rút lui của các tổ chức độc quyền khỏi thị trường quốc tế.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q16",
+                type: "multiple-choice",
+                content:
+                  "Các cuộc cách mạng công nghiệp khẳng định sự thắng lợi của chủ nghĩa tư bản vì đã",
+                options: [
+                  {
+                    id: "a",
+                    text: "tạo ra lực lượng sản xuất đồ sộ, làm thay đổi bộ mặt kinh tế - xã hội.",
+                  },
+                  {
+                    id: "b",
+                    text: "xoá bỏ hoàn toàn mâu thuẫn giữa tư sản và vô sản.",
+                  },
+                  {
+                    id: "c",
+                    text: "giúp các nước tư bản thoát khỏi sự phụ thuộc vào thuộc địa.",
+                  },
+                  {
+                    id: "d",
+                    text: "đưa giai cấp công nhân lên nắm quyền lãnh đạo xã hội.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q17",
+                type: "multiple-choice",
+                content:
+                  "Đặc điểm chung của các cuộc cách mạng tư sản ở Mỹ La-tinh trong nửa đầu thế kỉ XIX là gì?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Lật đổ chế độ phong kiến trong nước để thành lập các vương triều.",
+                  },
+                  {
+                    id: "b",
+                    text: "Đấu tranh chống thực dân Tây Ban Nha và Bồ Đào Nha để giành độc lập.",
+                  },
+                  {
+                    id: "c",
+                    text: "Chống lại sự thống trị của các nước đế quốc trẻ như Mỹ và Nhật.",
+                  },
+                  {
+                    id: "d",
+                    text: "Thiết lập chế độ xã hội chủ nghĩa đầu tiên ở khu vực.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q18",
+                type: "multiple-choice",
+                content:
+                  "Sự xuất hiện của các tổ chức độc quyền cuối thế kỉ XIX là hệ quả trực tiếp của",
+                options: [
+                  { id: "a", text: "sự suy yếu của giai cấp tư sản." },
+                  {
+                    id: "b",
+                    text: "quá trình cạnh tranh gay gắt và tích tụ tư bản.",
+                  },
+                  {
+                    id: "c",
+                    text: "sự can thiệp hoàn toàn của nhà nước vào kinh tế.",
+                  },
+                  {
+                    id: "d",
+                    text: "sự đình trệ của cách mạng khoa học kĩ thuật.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q19",
+                type: "multiple-choice",
+                content:
+                  "Tại sao nước Anh được mệnh danh là “đế quốc mà Mặt Trời không bao giờ lặn”?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Vì nước Anh nằm ở gần cực Bắc của Trái Đất.",
+                  },
+                  {
+                    id: "b",
+                    text: "Vì hệ thống thuộc địa của Anh trải rộng khắp các châu lục.",
+                  },
+                  {
+                    id: "c",
+                    text: "Vì nước Anh đi đầu trong cuộc cách mạng năng lượng mặt trời.",
+                  },
+                  {
+                    id: "d",
+                    text: "Vì Anh là nước duy nhất có chủ nghĩa tư bản phát triển.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q20",
+                type: "multiple-choice",
+                content:
+                  "Điểm khác biệt quan trọng của chủ nghĩa tư bản hiện đại so với chủ nghĩa tư bản thời kì tự do cạnh tranh là",
+                options: [
+                  {
+                    id: "a",
+                    text: "sự biến mất của mâu thuẫn giai cấp trong xã hội.",
+                  },
+                  {
+                    id: "b",
+                    text: "nhà nước tăng cường điều chỉnh và can thiệp vào nền kinh tế.",
+                  },
+                  {
+                    id: "c",
+                    text: "các nước tư bản không còn thực hiện chính sách xâm lược.",
+                  },
+                  {
+                    id: "d",
+                    text: "kinh tế tư nhân bị xoá bỏ hoàn toàn bởi kinh tế nhà nước.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q21",
+                type: "multiple-choice",
+                content:
+                  "Nhận định nào sau đây là đúng về tiềm năng của chủ nghĩa tư bản hiện đại?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Đã giải quyết được triệt để mâu thuẫn giữa giàu và nghèo.",
+                  },
+                  {
+                    id: "b",
+                    text: "Có khả năng tự điều chỉnh để tồn tại và phát triển trong bối cảnh mới.",
+                  },
+                  {
+                    id: "c",
+                    text: "Không còn phải đối mặt với bất kì cuộc khủng hoảng nào.",
+                  },
+                  {
+                    id: "d",
+                    text: "Sức sản xuất đã đạt đến giới hạn và không thể phát triển thêm.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q22",
+                type: "multiple-choice",
+                content:
+                  'Thách thức về "vấn đề chính trị, xã hội nan giải" của chủ nghĩa tư bản Mỹ hiện nay được biểu hiện qua',
+                options: [
+                  {
+                    id: "a",
+                    text: "nạn phân biệt chủng tộc và bạo lực súng đạn.",
+                  },
+                  {
+                    id: "b",
+                    text: "sự thống nhất tuyệt đối giữa các đảng phái chính trị.",
+                  },
+                  {
+                    id: "c",
+                    text: "việc xoá bỏ hoàn toàn các tệ nạn xã hội trong trường học.",
+                  },
+                  {
+                    id: "d",
+                    text: "sự công bằng tuyệt đối trong hưởng thụ phúc lợi xã hội.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q23",
+                type: "multiple-choice",
+                content:
+                  "Ý nghĩa quan trọng nhất của cuộc Duy tân Minh Trị đối với Nhật Bản là",
+                options: [
+                  {
+                    id: "a",
+                    text: "đưa Nhật Bản trở thành thuộc địa kiểu mới của Mỹ.",
+                  },
+                  {
+                    id: "b",
+                    text: "giúp Nhật Bản tránh được nguy cơ bị thực dân phương Tây xâm lược.",
+                  },
+                  {
+                    id: "c",
+                    text: "xoá bỏ hoàn toàn giai cấp nông dân trong xã hội Nhật.",
+                  },
+                  {
+                    id: "d",
+                    text: "đưa Nhật Bản trở thành trung tâm của phe xã hội chủ nghĩa.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q24",
+                type: "multiple-choice",
+                content:
+                  "Chủ nghĩa tư bản không thể giải quyết triệt để các cuộc khủng hoảng kinh tế vì",
+                options: [
+                  {
+                    id: "a",
+                    text: "bản chất của chủ nghĩa tư bản dựa trên sở hữu tư nhân và sự phát triển tự phát.",
+                  },
+                  {
+                    id: "b",
+                    text: "các nước tư bản thiếu kinh nghiệm trong quản lí kinh tế vĩ mô.",
+                  },
+                  {
+                    id: "c",
+                    text: "trình độ khoa học kĩ thuật của các nước tư bản còn quá thấp.",
+                  },
+                  {
+                    id: "d",
+                    text: "sự cản trở của các nước đang phát triển đối với thị trường toàn cầu.",
+                  },
+                ],
+                correctOptionId: "a",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q25",
+                type: "multiple-choice",
+                content:
+                  "Từ kinh nghiệm của cuộc Duy tân Minh Trị (Nhật Bản), các nước đang phát triển có thể rút ra bài học gì trong quá trình công nghiệp hóa hiện nay?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Chỉ tập trung phát triển quân sự để đối phó với ngoại xâm.",
+                  },
+                  {
+                    id: "b",
+                    text: "Đóng cửa thị trường để bảo vệ các doanh nghiệp trong nước.",
+                  },
+                  {
+                    id: "c",
+                    text: "Tiến hành cải cách đồng bộ trên nhiều lĩnh vực, chú trọng giáo dục và kĩ thuật.",
+                  },
+                  {
+                    id: "d",
+                    text: "Duy trì nguyên vẹn các thể chế chính trị phong kiến lỗi thời.",
+                  },
+                ],
+                correctOptionId: "c",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q26",
+                type: "multiple-choice",
+                content:
+                  "Việc các nước đế quốc đẩy mạnh xâm lược thuộc địa cuối thế kỉ XIX đã để lại hậu quả lâu dài nào cho các nước Á và châu Phi?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Làm cho các nước này sớm trở thành những quốc gia công nghiệp phát triển.",
+                  },
+                  {
+                    id: "b",
+                    text: "Gây ra sự nghèo nàn, lạc hậu và những mâu thuẫn sắc tộc, biên giới kéo dài.",
+                  },
+                  {
+                    id: "c",
+                    text: "Giúp các dân tộc bản địa nhanh chóng tiếp cận với văn minh phương Tây một cách bình đẳng.",
+                  },
+                  {
+                    id: "d",
+                    text: "Xoá bỏ hoàn toàn chế độ phong kiến và thiết lập nền dân chủ hiện đại.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q27",
+                type: "multiple-choice",
+                content:
+                  'Nhận định "1% dân số giàu có sở hữu tài sản bằng 99% dân số còn lại" trong phong trào "Chiếm lấy phố Uôn" cho thấy điều gì về bản chất của chủ nghĩa tư bản?',
+                options: [
+                  {
+                    id: "a",
+                    text: "Sự công bằng trong phân phối thành quả kinh tế.",
+                  },
+                  {
+                    id: "b",
+                    text: "Sự bất bình đẳng sâu sắc trong lòng xã hội tư bản.",
+                  },
+                  {
+                    id: "c",
+                    text: "Sự biến mất của giai cấp tư sản độc quyền.",
+                  },
+                  {
+                    id: "d",
+                    text: "Hiệu quả tuyệt đối của mô hình kinh tế thị trường tư bản.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q28",
+                type: "multiple-choice",
+                content:
+                  "Sự phát triển nhảy vọt của cách mạng khoa học - công nghệ trong giai đoạn chủ nghĩa tư bản hiện đại có tác động như thế nào đến lực lượng lao động?",
+                options: [
+                  {
+                    id: "a",
+                    text: "Làm giảm nhu cầu về lao động có trình độ chuyên môn cao.",
+                  },
+                  {
+                    id: "b",
+                    text: "Đòi hỏi lực lượng lao động phải không ngừng nâng cao trình độ và kĩ năng.",
+                  },
+                  {
+                    id: "c",
+                    text: "Khiến cho công nhân không còn vai trò gì trong quá trình sản xuất.",
+                  },
+                  {
+                    id: "d",
+                    text: "Giúp xoá bỏ hoàn toàn sự bóc lột sức lao động trong các nhà máy.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q29",
+                type: "multiple-choice",
+                content:
+                  "Trước những thách thức về biến đổi khí hậu và an ninh năng lượng, các nước tư bản hiện đại đang có xu hướng",
+                options: [
+                  {
+                    id: "a",
+                    text: "quay trở lại sử dụng hoàn toàn năng lượng hóa thạch để giảm chi phí.",
+                  },
+                  {
+                    id: "b",
+                    text: "tìm kiếm và chuyển đổi sang các nguồn năng lượng xanh, sạch.",
+                  },
+                  {
+                    id: "c",
+                    text: "đình chỉ toàn bộ hoạt động sản xuất công nghiệp để bảo vệ môi trường.",
+                  },
+                  {
+                    id: "d",
+                    text: "bỏ mặc các vấn đề môi trường cho các nước đang phát triển tự giải quyết.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q30",
+                type: "multiple-choice",
+                content:
+                  'Vận dụng hiểu biết về tiềm năng của chủ nghĩa tư bản hiện đại, yếu tố nào sau đây đóng vai trò "đòn bẩy" quan trọng nhất cho sự tăng trưởng kinh tế hiện nay?',
+                options: [
+                  {
+                    id: "a",
+                    text: "Việc duy trì các hàng rào thuế quan bảo hộ.",
+                  },
+                  {
+                    id: "b",
+                    text: "Việc ứng dụng thành tựu của cuộc Cách mạng công nghiệp lần thứ tư.",
+                  },
+                  {
+                    id: "c",
+                    text: "Việc tăng cường quân sự hóa nền kinh tế quốc gia.",
+                  },
+                  {
+                    id: "d",
+                    text: "Việc hạn chế sự tự do dịch chuyển của dòng vốn quốc tế.",
+                  },
+                ],
+                correctOptionId: "b",
+                shuffleOptions: true,
+                score: 0.25,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q31",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Ở châu Âu, sau Cách mạng tư sản Anh và đặc biệt là Cách mạng tư sản Pháp, chủ nghĩa tư bản từng bước được xác lập. Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mĩ nửa sau thế kỉ XVIII đánh dấu sự mở rộng của chủ nghĩa tư bản ở ngoài châu Âu. Từ thập kỉ 60 của thế kỉ XVIII, cuộc cách mạng công nghiệp bắt đầu từ Anh, sau đó lan ra các nước Pháp, Đức,... đã tạo ra những chuyển biến to lớn về kinh tế – xã hội, làm thay đổi bộ mặt của các nước này và khẳng định sự thắng lợi của chủ nghĩa tư bản. Nửa sau thế kỉ XIX, các cuộc cách mạng tư sản tiếp diễn dưới những hình thức khác nhau và giành được thắng lợi. Sự kiện đấu tranh thống nhất I-ta-li-a và Đức đã dẫn đến sự xác lập chủ nghĩa tư bản rộng khắp ở châu Âu và Bắc Mĩ.” (Đỗ Thanh Bình (chủ biên), Sách giáo khoa Lịch sử 11 bộ Cánh diều, NXB Đại học Sư phạm, 2023, tr 13-14).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Cách mạng công nghiệp bắt đầu từ nước Anh vào nửa sau thế kỉ XVIII.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mỹ mở đầu cho sự xác lập của chủ nghĩa tư bản ngay tại châu Âu.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Cách mạng công nghiệp không chỉ thúc đẩy lực lượng sản xuất phát triển mà còn là nhân tố quyết định khẳng định sự thắng lợi của chế độ tư bản chủ nghĩa.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Sự thành công của các cuộc cách mạng tư sản thời kì này cho thấy chủ nghĩa tư bản là một hệ thống xã hội hoàn hảo và không còn mâu thuẫn giai cấp.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q32",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Sự phát triển nhanh chóng của chủ nghĩa tư bản kéo theo nhu cầu ngày càng cao về nguyên liệu và nhân công, dẫn đến việc tăng cường chính sách xâm lược, mở rộng thuộc địa. Cuối thế kỉ XIX - đầu thế kỉ XX, các nước tư bản chuyển sang giai đoạn đế quốc chủ nghĩa. Chủ nghĩa đế quốc là hệ quả trực tiếp của quá trình xâm lược thuộc địa nhằm tìm kiếm thị trường, thu lợi nhuận và đầu tư tư bản ở nước ngoài. Trong quá trình xâm lược thuộc địa, các nước đế quốc đã thiết lập hệ thống thuộc địa ở châu Á, châu Phi và khu vực Mĩ La-tinh. Trong số các nước đế quốc, nước Anh được mệnh danh là 'đế quốc mà Mặt Trời không bao giờ lặn' nhờ có hệ thống thuộc địa rộng lớn nhất.” (Vũ Minh Giang (chủ biên), Sách giáo khoa Lịch sử 11 bộ Kết nối tri thức với cuộc sống, NXB Giáo dục Việt Nam, 2023, tr 13-14).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Cuối thế kỉ XIX - đầu thế kỉ XX, các nước tư bản chuyển sang giai đoạn đế quốc chủ nghĩa.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Nước Đức là quốc gia sở hữu hệ thống thuộc địa rộng lớn nhất thế giới vào năm 1914.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Nhu cầu về thị trường, nguyên liệu và nguồn nhân công là động lực cốt lõi thúc đẩy các nước tư bản đẩy mạnh chính sách xâm lược thuộc địa.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Việc các nước đế quốc thiết lập hệ thống thuộc địa ở châu Á, châu Phi đã giúp các quốc gia này nhanh chóng tiến lên chủ nghĩa tư bản một cách bình đẳng.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q33",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Ở châu Á, cuộc Duy tân Minh Trị bắt đầu từ năm 1868, đưa Nhật Bản từ một nước phong kiến trở thành nước tư bản chủ nghĩa. Cuộc cải cách này bao gồm những chuyển biến toàn diện trên các lĩnh vực: chính trị, kinh tế, quân sự, văn hoá, xã hội, giáo dục. Cuộc cải cách đã đưa nền kinh tế Nhật Bản phát triển mạnh mẽ trong 30 năm cuối thế kỉ XIX, đồng thời giúp Nhật Bản tránh được nguy cơ bị xâm lược. Ở Trung Quốc, Cách mạng Tân Hợi (1911) do những trí thức cấp tiến và tiểu tư sản lãnh đạo đã lật đổ triều đại Mãn Thanh. Mặc dù cuộc cách mạng này không thực sự thủ tiêu giai cấp phong kiến nhưng đã mở đường cho chủ nghĩa tư bản phát triển ở quốc gia lớn nhất, đông dân nhất châu Á.” (Vũ Minh Giang (chủ biên), Sách giáo khoa Lịch sử 11 bộ Kết nối tri thức với cuộc sống, NXB Giáo dục Việt Nam, 2023, tr 15).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Cuộc Duy tân Minh Trị ở Nhật Bản bùng nổ vào giữa thế kỉ XX.",
+                    correct: false,
+                  },
+                  {
+                    id: "b",
+                    text: "Cách mạng Tân Hợi (1911) ở Trung Quốc đã lật đổ triều đại Mãn Thanh, chấm dứt chế độ quân chủ chuyên chế.",
+                    correct: true,
+                  },
+                  {
+                    id: "c",
+                    text: "Cả Duy tân Minh Trị và Cách mạng Tân Hợi đều góp phần mở đường cho chủ nghĩa tư bản phát triển ở châu Á.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Cải cách Duy tân Minh Trị để lại bài học kinh nghiệm cho Việt Nam về việc chủ động cải cách, hội nhập quốc tế để phát triển kinh tế và bảo vệ độc lập dân tộc.",
+                    correct: true,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q34",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Thời kì xác lập chủ nghĩa tư bản là thời kì tự do cạnh tranh của chủ nghĩa tư bản. Cuối thế kỉ XIX - đầu thế kỉ XX, chủ nghĩa tư bản chuyển sang giai đoạn độc quyền. Trong khoảng 3 thập kỉ, việc sử dụng những nguồn năng lượng mới cùng nhiều thành tựu khoa học - kĩ thuật đã thúc đẩy sự phát triển mạnh mẽ của nền kinh tế. Cùng với sự phát triển kinh tế, quá trình cạnh tranh gay gắt làm cho các xí nghiệp vừa và nhỏ bị phá sản, dẫn đến sự xuất hiện những xí nghiệp khổng lồ và các tổ chức độc quyền. Sự phát triển của các tổ chức độc quyền tạo ra cơ sở cho bước chuyển của chủ nghĩa tư bản từ tự do cạnh tranh sang độc quyền.” (Đỗ Thanh Bình (chủ biên), Sách giáo khoa Lịch sử 11 bộ Cánh diều, NXB Đại học Sư phạm, 2023, tr 16).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Các-ten, xanh-đi-ca, tơ-rốt là các hình thức tiêu biểu của các tổ chức độc quyền.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Giai đoạn xác lập chủ nghĩa tư bản cũng đồng thời là giai đoạn chủ nghĩa tư bản đã bước vào thời kì độc quyền.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Sự tích tụ tư sản sản xuất và sự phá sản của các xí nghiệp vừa và nhỏ dưới tác động của cạnh tranh gay gắt là nguyên nhân dẫn đến sự ra đời các tổ chức độc quyền.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Sự xuất hiện của các tổ chức độc quyền đã xoá bỏ hoàn toàn quy luật cạnh tranh trong nền kinh tế thị trường tư bản chủ nghĩa.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q35",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Chủ nghĩa tư bản hiện đại là thuật ngữ dùng để chỉ một giai đoạn phát triển của chủ nghĩa tư bản từ sau Chiến tranh thế giới thứ hai đến nay với những biểu hiện mới. Tiêu biểu trong đó là sự kết hợp giữa sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh chính trị của nhà nước tư bản. Chủ nghĩa tư bản hiện đại có sức sản xuất phát triển cao trên cơ sở những thành tựu của cách mạng khoa học - công nghệ. Nền sản xuất này đòi hỏi lực lượng lao động phải có trình độ cao để đáp ứng sự phát triển nhảy vọt. Đồng thời, chủ nghĩa tư bản không ngừng điều chỉnh để tồn tại và phát triển trong bối cảnh mới.” (Vũ Minh Giang (chủ biên), Sách giáo khoa Lịch sử 11 bộ Kết nối tri thức với cuộc sống, NXB Giáo dục Việt Nam, 2023, tr 17).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Chủ nghĩa tư bản hiện đại là thuật ngữ chỉ giai đoạn phát triển của chủ nghĩa tư bản từ sau Chiến tranh thế giới thứ hai đến nay.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Trong giai đoạn hiện đại, nhà nước tư sản hoàn toàn không can thiệp hay kết hợp với các tổ chức độc quyền tư nhân.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Khả năng tự điều chỉnh và ứng dụng khoa học - công nghệ là những yếu tố quan trọng giúp chủ nghĩa tư bản hiện đại tiếp tục tồn tại và phát triển.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Nhờ sự điều chỉnh chính sách, chủ nghĩa tư bản hiện đại đã hoàn toàn xóa bỏ bản chất bóc lột giá trị thặng dư đối với người lao động.",
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q36",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Tiềm năng của chủ nghĩa tư bản hiện đại được biểu hiện cụ thể trên các lĩnh vực như kinh tế, khoa học - công nghệ, kinh nghiệm quản lí và khả năng tự điều chỉnh. Chủ nghĩa tư bản có ưu thế trong việc sử dụng những thành tựu của cuộc Cách mạng công nghiệp lần thứ tư để phát triển kinh tế. Các nước tư bản phát triển trở thành trung tâm kinh tế, tài chính, khoa học - công nghệ của thế giới. Những quốc gia này sở hữu quy mô nền kinh tế và thu nhập bình quân đầu người thuộc hàng cao nhất thế giới. Nhóm G7 được sáng lập năm 1976 là một điển hình tiêu biểu cho tập hợp các quốc gia tư bản phát triển nhất thế giới.” (Hà Minh Hồng (chủ biên), Sách giáo khoa Lịch sử 11 bộ Chân trời sáng tạo, NXB Giáo dục Việt Nam, 2023, tr 17-18).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Các nước tư bản phát triển hiện nay đóng vai trò là các trung tâm kinh tế, tài chính lớn của thế giới.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Nhóm G7 là tập hợp các quốc gia đang phát triển thuộc khu vực châu Á và châu Phi.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Trình độ phát triển cao về khoa học - công nghệ và kinh nghiệm quản lý tạo nên sức mạnh kinh tế quan trọng cho chủ nghĩa tư bản hiện đại.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Việt Nam hoàn toàn có thể chủ động tiếp thu, học hỏi các kinh nghiệm quản lý công nghiệp hóa, hiện đại hóa từ các nước tư bản phát triển để đẩy mạnh...",
+                    correct: true,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q37",
+                type: "true-false",
+                content:
+                  "Đọc đoạn tư liệu sau: “Chủ nghĩa tư bản hiện đại đang phải đối mặt với nhiều thách thức to lớn và khó giải quyết. Thứ nhất, chủ nghĩa tư bản khó có thể giải quyết dứt điểm những cuộc khủng hoảng kinh tế, tài chính mang tính toàn cầu. Từ cuộc khủng hoảng dầu mỏ năm 1973 đến nay, các nước tư bản phát triển đã chú trọng tìm kiếm các nguồn năng lượng mới, xanh và sạch. Tuy nhiên, quá trình chuyển đổi năng lượng diễn ra chậm chạp và sự phụ thuộc vào dầu mỏ vẫn còn rất lớn. Khủng hoảng năng lượng tiếp tục gây ra nhiều tác động tiêu cực như lạm phát cao, suy thoái kinh tế và ô nhiễm môi trường nghiêm trọng.” (Vũ Minh Giang (chủ biên), Sách giáo khoa Lịch sử 11 bộ Kết nối tri thức với cuộc sống, NXB Giáo dục Việt Nam, 2023, tr 18).",
+                statements: [
+                  {
+                    id: "a",
+                    text: "Khủng hoảng năng lượng và ô nhiễm môi trường là những thách thức mà các nước tư bản đang phải đối mặt.",
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: "Cuộc khủng hoảng dầu mỏ năm 1973 đã giúp các nước tư bản chấm dứt hoàn toàn sự phụ thuộc vào nguồn năng lượng hóa thạch.",
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: "Các cuộc khủng hoảng kinh tế, tài chính mang tính toàn cầu bắt nguồn từ những mâu thuẫn nội tại vốn có của phương thức sản xuất tư bản chủ nghĩa.",
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: "Các vấn đề an ninh phi truyền thống như biến đổi khí hậu hay khủng hoảng năng lượng chỉ có thể giải quyết hiệu quả thông qua sự hợp tác quốc tế rộng rãi, không phân biệt chế độ chính trị.",
+                    correct: true,
+                  },
+                ],
+                score: 1,
+              },
+              {
+                id: "lichsugiuaky-ontap-b2-q38",
+                type: "true-false",
+                content:
+                  "Đọc đoạn thông tin sau: “Bên cạnh các thách thức kinh tế, chủ nghĩa tư bản hiện đại còn đối mặt với những vấn đề chính trị, xã hội nan giải. Sự chênh lệch giàu nghèo ngày càng gia tăng làm sâu sắc thêm tình trạng bất bình đẳng xã hội. Phong trào 'Chiếm lấy phố Uôn' (Occupy Wall Street) xuất hiện ở Mĩ vào đầu năm 2011 với khẩu hiệu '99% chống lại 1%'. Tên gọi này phản ánh thực trạng 1% dân số Mĩ giàu có nắm giữ lượng tài sản bằng cả 99% dân số cộng lại. Chỉ sau một thời gian ngắn, phong trào này đã nhanh chóng lan rộng sang nhiều bang ở Mĩ và hàng trăm thành phố ở các nước tư bản khác.” (Đỗ Thanh Bình (chủ biên), Sách giáo khoa Lịch sử 11 bộ Cánh diều, NXB Đại học Sư phạm, 2023, tr 19).",
+                statements: [
+                  {
+                    id: "a",
+                    text: 'Phong trào "Chiếm lấy phố Uôn" bùng nổ tại Mỹ vào đầu năm 2011.',
+                    correct: true,
+                  },
+                  {
+                    id: "b",
+                    text: 'Khẩu hiệu "99% chống lại 1%" thể hiện sự bình đẳng tuyệt đối về mặt kinh tế giữa các tầng lớp trong xã hội Mỹ.',
+                    correct: false,
+                  },
+                  {
+                    id: "c",
+                    text: 'Sự bùng nổ và lan rộng của phong trào "Chiếm lấy phố Uôn" chứng tỏ mâu thuẫn giai cấp và tình trạng phân hóa giàu nghèo trong xã hội tư bản ngày càng sâu sắc.',
+                    correct: true,
+                  },
+                  {
+                    id: "d",
+                    text: 'Sự xuất hiện của phong trào "Chiếm lấy phố Uôn" là dấu hiệu cho thấy chủ nghĩa tư bản hiện đại đã hoàn toàn diệt vong và không còn khả năng tự điều chỉnh.',
+                    correct: false,
+                  },
+                ],
+                score: 1,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   //======= Địa lý ==============
   {
     id: "dia-ly",
     name: "Địa lý",
     chapters: [
-      {
-        id: "dia-ly-c1",
-        name: "Kiểm tra 15 phút",
-        exams: [
-          {
-            id: "dia-ly-15p-1",
-            title: "Kiểm tra 15 phút — Quốc gia trên thế giới",
-            examType: "Kiểm tra 15 phút",
-            description: "Đề mẫu điền khuyết với lựa chọn nhiễu.",
-            duration: 15,
-            questions: [
-              {
-                id: "dia-ly-15p-1-q1",
-                type: "fill-blank",
-                content:
-                  "Quốc gia lớn nhất trên thế giới là {{blank1}}, quốc gia đông dân nhất trên thế giới là {{blank2}}.",
-                blanks: [
-                  { id: "blank1", correctAnswerId: "nga" },
-                  { id: "blank2", correctAnswerId: "an-do" },
-                ],
-                options: [
-                  { id: "trung-quoc", text: "Trung Quốc" },
-                  { id: "an-do", text: "Ấn Độ" },
-                  { id: "nga", text: "Nga" },
-                  { id: "my", text: "Mỹ" },
-                ],
-                allowReuse: false,
-                score: 1,
-                explanation:
-                  "Nga có diện tích lớn nhất thế giới (~17 triệu km²). Ấn Độ hiện là quốc gia đông dân nhất (vượt Trung Quốc từ 2023).",
-              },
-            ],
-          },
-        ],
-      }, // <--- DẤU PHẨY QUAN TRỌNG Ở ĐÂY, NGĂN CÁCH 2 CHƯƠNG
-
       // === CHƯƠNG MỚI THÊM VÀO ===
       {
         id: "dia-ly-gk1",
