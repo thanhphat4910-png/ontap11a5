@@ -1443,3 +1443,92 @@ mjx-container {
   overflow-x: auto;
   overflow-y: hidden;
 }
+/* ===== Passage (đoạn văn có nhiều chỗ trống) ===== */
+.passage-box {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.85;
+}
+.passage-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.55rem;
+  font-size: 0.95rem;
+}
+.passage-content {
+  font-size: 1.02rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.passage-blank {
+  display: inline-block;
+  min-width: 70px;
+  padding: 0.1rem 0.55rem;
+  margin: 0 0.15rem;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.15s;
+  vertical-align: baseline;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  background: transparent;
+}
+.passage-blank:hover {
+  background: var(--primary-soft);
+}
+.passage-blank.current {
+  background: var(--primary-soft);
+  border-bottom-width: 3px;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.passage-blank.filled {
+  background: var(--surface);
+  color: var(--text);
+  border-bottom-color: var(--success);
+}
+.passage-blank.correct {
+  background: var(--success-bg);
+  color: var(--success);
+  border-bottom-color: var(--success);
+}
+.passage-blank.wrong {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-bottom-color: var(--danger);
+}
+
+.passage-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.passage-block-wrapper .question-card {
+  margin-left: 0.5rem;
+  border-left: 3px solid var(--primary-soft);
+}
+
+.passage-fill-blank-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* Sticky passage: chỉ áp dụng desktop để tránh xung đột header mobile */
+@media (min-width: 769px) {
+  .passage-block-wrapper > .passage-box {
+    position: sticky;
+    top: 130px;
+    z-index: 5;
+    max-height: 42vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+  }
+}
