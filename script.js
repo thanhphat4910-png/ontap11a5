@@ -139,7 +139,7 @@ chart: {
 /* ====== 1. HẰNG SỐ ====== */
 const STORAGE_KEY = "quizApp.v1";
 const APP_VERSION = 1;
-const MAX_SHORT_ANSWER_LENGTH = 4;
+const MAX_SHORT_ANSWER_LENGTH = 100;
 
 const QUESTION_TYPE_ORDER = {
   "multiple-choice": 1,
@@ -4720,9 +4720,1945 @@ const QUESTION_BANK = [
     ],
   },
   //======= Tiếng Anh ==============
-  { id: "tieng-anh", name: "Tiếng Anh", chapters: [] },
+  {
+    id: "tieng-anh",
+    name: "Tiếng Anh",
+    chapters: [
+      {
+        id: "tienganhgiuaky-ontap",
+        name: "Ôn tập giữa kỳ I",
+        exams: [
+          // --- Unit 1 CLIL ---
+          {
+            id: "tienganh-unit1-bacteria-viruses",
+            title: "Unit 1 CLIL (p.16) - Bacteria and Viruses",
+            examType: "Giữa kì I",
+            description:
+              "Đọc đoạn văn và chọn đáp án đúng nhất để điền vào mỗi chỗ trống.",
+            duration: 45,
+            passages: [
+              {
+                id: "passage-unit1",
+                title:
+                  "Read the following passage and choose the best option for each blank.",
+                content:
+                  "{{1}} bacteria {{2}} viruses can cause diseases, {{3}} they are different {{4}} many ways. Bacteria are living {{5}}. They can live in many places, {{6}} as soil, water, and {{7}} human body. {{8}} smallest bacteria are about 0.4 micron* {{9}} diameter. Some bacteria in our bodies are {{10}}, {{11}} some can cause infectious diseases such as tuberculosis** or {{12}}. Antibiotics {{13}} {{14}} {{15}} {{16}} {{17}} by bacteria.\nViruses are tiny germs {{18}} cause diseases in people, animals, and plants. They can cause {{19}}, from the common cold or the flu to {{20}} such {{21}} AIDS and Covid-19. As they are very small (0.02 to 0.25 micron), viruses can {{22}} our bodies {{23}}. They are not living things, {{24}} they {{25}} our bodies to {{26}}. Then, they start to grow and cause the {{27}} to make {{28}} of the virus. Vaccines are often used to {{29}} the {{30}} of diseases caused by viruses.",
+              },
+            ],
+            questions: [
+              {
+                id: "u1-q01",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 1,
+                content: "",
+                options: [
+                  { id: "a", text: "Both" },
+                  { id: "b", text: "Each" },
+                  { id: "c", text: "All" },
+                  { id: "d", text: "Neither" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Both A and B: cả A và B (cấu trúc song song).",
+              },
+              {
+                id: "u1-q02",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 2,
+                content: "",
+                options: [
+                  { id: "a", text: "and" },
+                  { id: "b", text: "or" },
+                  { id: "c", text: "but" },
+                  { id: "d", text: "so" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "Cấu trúc cố định 'Both ... and ...' nghĩa là 'cả ... và ...'.",
+              },
+              {
+                id: "u1-q03",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 3,
+                content: "",
+                options: [
+                  { id: "a", text: "but" },
+                  { id: "b", text: "so" },
+                  { id: "c", text: "because" },
+                  { id: "d", text: "although" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "but: nhưng (diễn tả sự tương phản).",
+              },
+              {
+                id: "u1-q04",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 4,
+                content: "",
+                options: [
+                  { id: "a", text: "in" },
+                  { id: "b", text: "on" },
+                  { id: "c", text: "at" },
+                  { id: "d", text: "with" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "in many ways: theo nhiều cách.",
+              },
+              {
+                id: "u1-q05",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 5,
+                content: "",
+                options: [
+                  { id: "a", text: "organisms" },
+                  { id: "b", text: "things" },
+                  { id: "c", text: "objects" },
+                  { id: "d", text: "bodies" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "living organisms: sinh vật sống.",
+              },
+              {
+                id: "u1-q06",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 6,
+                content: "",
+                options: [
+                  { id: "a", text: "such" },
+                  { id: "b", text: "so" },
+                  { id: "c", text: "as" },
+                  { id: "d", text: "like" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "such as: ví dụ như.",
+              },
+              {
+                id: "u1-q07",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 7,
+                content: "",
+                options: [
+                  { id: "a", text: "the" },
+                  { id: "b", text: "a" },
+                  { id: "c", text: "an" },
+                  { id: "d", text: "some" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "the human body: cơ thể con người.",
+              },
+              {
+                id: "u1-q08",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 8,
+                content: "",
+                options: [
+                  { id: "a", text: "The" },
+                  { id: "b", text: "A" },
+                  { id: "c", text: "An" },
+                  { id: "d", text: "Some" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "Trước so sánh nhất (smallest) phải dùng mạo từ xác định 'The'.",
+              },
+              {
+                id: "u1-q09",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 9,
+                content: "",
+                options: [
+                  { id: "a", text: "in" },
+                  { id: "b", text: "on" },
+                  { id: "c", text: "at" },
+                  { id: "d", text: "for" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "in diameter: có đường kính là.",
+              },
+              {
+                id: "u1-q10",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 10,
+                content: "",
+                options: [
+                  { id: "a", text: "helpful" },
+                  { id: "b", text: "harmful" },
+                  { id: "c", text: "useless" },
+                  { id: "d", text: "dangerous" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "helpful: có ích.",
+              },
+              {
+                id: "u1-q11",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 11,
+                content: "",
+                options: [
+                  { id: "a", text: "but" },
+                  { id: "b", text: "and" },
+                  { id: "c", text: "so" },
+                  { id: "d", text: "because" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "but: nhưng (tương phản).",
+              },
+              {
+                id: "u1-q12",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 12,
+                content: "",
+                options: [
+                  { id: "a", text: "food poisoning" },
+                  { id: "b", text: "food poison" },
+                  { id: "c", text: "poisoned food" },
+                  { id: "d", text: "poisoning food" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "food poisoning: ngộ độc thực phẩm.",
+              },
+              {
+                id: "u1-q13",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 13,
+                content: "",
+                options: [
+                  { id: "a", text: "are often used" },
+                  { id: "b", text: "is often used" },
+                  { id: "c", text: "was often used" },
+                  { id: "d", text: "often use" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Câu bị động, chủ ngữ số nhiều.",
+              },
+              {
+                id: "u1-q14",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 14,
+                content: "",
+                options: [
+                  { id: "a", text: "to" },
+                  { id: "b", text: "for" },
+                  { id: "c", text: "at" },
+                  { id: "d", text: "in" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "be used to + V.",
+              },
+              {
+                id: "u1-q15",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 15,
+                content: "",
+                options: [
+                  { id: "a", text: "treat" },
+                  { id: "b", text: "treating" },
+                  { id: "c", text: "treated" },
+                  { id: "d", text: "treatment" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Sau 'to' dùng động từ nguyên mẫu.",
+              },
+              {
+                id: "u1-q16",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 16,
+                content: "",
+                options: [
+                  { id: "a", text: "infections" },
+                  { id: "b", text: "infection" },
+                  { id: "c", text: "infecting" },
+                  { id: "d", text: "infected" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Danh từ số nhiều.",
+              },
+              {
+                id: "u1-q17",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 17,
+                content: "",
+                options: [
+                  { id: "a", text: "caused" },
+                  { id: "b", text: "causing" },
+                  { id: "c", text: "cause" },
+                  { id: "d", text: "to cause" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Rút gọn mệnh đề quan hệ bị động.",
+              },
+              {
+                id: "u1-q18",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 18,
+                content: "",
+                options: [
+                  { id: "a", text: "that" },
+                  { id: "b", text: "who" },
+                  { id: "c", text: "whose" },
+                  { id: "d", text: "whom" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Đại từ quan hệ thay cho vật.",
+              },
+              {
+                id: "u1-q19",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 19,
+                content: "",
+                options: [
+                  { id: "a", text: "a range of illnesses" },
+                  { id: "b", text: "a range of illness" },
+                  { id: "c", text: "range of illnesses" },
+                  { id: "d", text: "an illness range" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "a range of + N số nhiều.",
+              },
+              {
+                id: "u1-q20",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 20,
+                content: "",
+                options: [
+                  { id: "a", text: "more serious diseases" },
+                  { id: "b", text: "more seriously diseases" },
+                  { id: "c", text: "serious more diseases" },
+                  { id: "d", text: "diseases more serious" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Tính từ so sánh hơn đứng trước danh từ.",
+              },
+              {
+                id: "u1-q21",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 21,
+                content: "",
+                options: [
+                  { id: "a", text: "as" },
+                  { id: "b", text: "like" },
+                  { id: "c", text: "that" },
+                  { id: "d", text: "which" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "such as: ví dụ như.",
+              },
+              {
+                id: "u1-q22",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 22,
+                content: "",
+                options: [
+                  { id: "a", text: "get into" },
+                  { id: "b", text: "get in" },
+                  { id: "c", text: "enter into" },
+                  { id: "d", text: "go in" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "get into: xâm nhập vào.",
+              },
+              {
+                id: "u1-q23",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 23,
+                content: "",
+                options: [
+                  { id: "a", text: "easily" },
+                  { id: "b", text: "easy" },
+                  { id: "c", text: "easier" },
+                  { id: "d", text: "easiness" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Trạng từ bổ nghĩa cho động từ.",
+              },
+              {
+                id: "u1-q24",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 24,
+                content: "",
+                options: [
+                  { id: "a", text: "so" },
+                  { id: "b", text: "but" },
+                  { id: "c", text: "and" },
+                  { id: "d", text: "because" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "so: vì vậy.",
+              },
+              {
+                id: "u1-q25",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 25,
+                content: "",
+                options: [
+                  { id: "a", text: "need to enter" },
+                  { id: "b", text: "need enter" },
+                  { id: "c", text: "need entering" },
+                  { id: "d", text: "needs to enter" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "need to + V.",
+              },
+              {
+                id: "u1-q26",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 26,
+                content: "",
+                options: [
+                  { id: "a", text: "become active" },
+                  { id: "b", text: "become actively" },
+                  { id: "c", text: "becoming active" },
+                  { id: "d", text: "active become" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "become + adj.",
+              },
+              {
+                id: "u1-q27",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 27,
+                content: "",
+                options: [
+                  { id: "a", text: "infected cell" },
+                  { id: "b", text: "infecting cell" },
+                  { id: "c", text: "infection cell" },
+                  { id: "d", text: "cell infected" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "infected cell: tế bào bị nhiễm.",
+              },
+              {
+                id: "u1-q28",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 28,
+                content: "",
+                options: [
+                  { id: "a", text: "millions of copies" },
+                  { id: "b", text: "million copies" },
+                  { id: "c", text: "millions copies" },
+                  { id: "d", text: "million of copies" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "millions of + N.",
+              },
+              {
+                id: "u1-q29",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 29,
+                content: "",
+                options: [
+                  { id: "a", text: "prevent" },
+                  { id: "b", text: "preventing" },
+                  { id: "c", text: "prevention" },
+                  { id: "d", text: "prevented" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "be used to + V.",
+              },
+              {
+                id: "u1-q30",
+                type: "multiple-choice",
+                passageId: "passage-unit1",
+                blankNumber: 30,
+                content: "",
+                options: [
+                  { id: "a", text: "spread" },
+                  { id: "b", text: "spreading" },
+                  { id: "c", text: "spreads" },
+                  { id: "d", text: "spreaded" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "the spread of: sự lây lan của.",
+              },
+            ],
+          },
+          // --- Unit 2 Culture ---
+          {
+            id: "tienganh-unit2-culture",
+            title: "Unit 2 - Culture (p.25) - The Generation Gap",
+            examType: "Giữa kì I",
+            description: "The generation gap in Asian American families",
+            duration: 45,
+            passages: [
+              {
+                id: "passage-unit2-culture",
+                title:
+                  "Read the following passage and choose the best option for each blank.",
+                content:
+                  "The generation gap in Asian American families For people in most cultures, the generation gap in their family is mainly about {{1}} {{2}} {{3}} tastes, career choices, and lifestyles. In Asian American families, {{4}}, the process of adapting to American culture {{5}} the generation gap {{6}}. Naturally, children of Asian American {{7}} adapt to American culture {{8}} than their parents. English quickly {{9}} their first language. They accept American values such as {{10}}, {{11}}, {{12}}, and {{13}}. They also {{14}} American {{15}} in their daily lives. On the other hand, many first-generation Asian American parents {{16}} to the new culture. They {{17}} their {{18}} language. They {{19}} their {{20}} lifestyle and old culture. They often {{21}} their children {{22}} their {{23}}, such as the {{24}} of family, respect {{25}} the elders and the community. {{26}} their different {{27}} the new culture, Asian American children may have cultural values {{28}} their {{29}}. They may not do {{30}} their parents want them {{31}} or what they are expected {{32}}. {{33}}, Asian American parents may fail to have their children follow the {{34}}.",
+              },
+            ],
+            questions: [
+              {
+                id: "u2c-q01",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 1,
+                content: "",
+                options: [
+                  { id: "a", text: "differences" },
+                  { id: "b", text: "difference" },
+                  { id: "c", text: "similarities" },
+                  { id: "d", text: "distinguish" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "differences: sự khác biệt.",
+              },
+              {
+                id: "u2c-q02",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 2,
+                content: "",
+                options: [
+                  { id: "a", text: "in" },
+                  { id: "b", text: "on" },
+                  { id: "c", text: "at" },
+                  { id: "d", text: "with" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "differences in: sự khác biệt về.",
+              },
+              {
+                id: "u2c-q03",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 3,
+                content: "",
+                options: [
+                  { id: "a", text: "musical" },
+                  { id: "b", text: "music" },
+                  { id: "c", text: "musically" },
+                  { id: "d", text: "musician" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "musical tastes: thị hiếu âm nhạc.",
+              },
+              {
+                id: "u2c-q04",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 4,
+                content: "",
+                options: [
+                  { id: "a", text: "however" },
+                  { id: "b", text: "therefore" },
+                  { id: "c", text: "moreover" },
+                  { id: "d", text: "because" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "however: tuy nhiên.",
+              },
+              {
+                id: "u2c-q05",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 5,
+                content: "",
+                options: [
+                  { id: "a", text: "makes" },
+                  { id: "b", text: "make" },
+                  { id: "c", text: "making" },
+                  { id: "d", text: "made" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "makes: làm cho (chủ ngữ số ít).",
+              },
+              {
+                id: "u2c-q06",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 6,
+                content: "",
+                options: [
+                  { id: "a", text: "wider" },
+                  { id: "b", text: "wide" },
+                  { id: "c", text: "widely" },
+                  { id: "d", text: "widen" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "wider: rộng hơn (so sánh hơn).",
+              },
+              {
+                id: "u2c-q07",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 7,
+                content: "",
+                options: [
+                  { id: "a", text: "immigrants" },
+                  { id: "b", text: "emigrants" },
+                  { id: "c", text: "migrants" },
+                  { id: "d", text: "movers" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "immigrants: người nhập cư.",
+              },
+              {
+                id: "u2c-q08",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 8,
+                content: "",
+                options: [
+                  { id: "a", text: "much faster" },
+                  { id: "b", text: "fast" },
+                  { id: "c", text: "more fast" },
+                  { id: "d", text: "more faster" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "much faster: nhanh hơn nhiều.",
+              },
+              {
+                id: "u2c-q09",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 9,
+                content: "",
+                options: [
+                  { id: "a", text: "becomes" },
+                  { id: "b", text: "become" },
+                  { id: "c", text: "becoming" },
+                  { id: "d", text: "became" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "becomes: trở thành (chia số ít).",
+              },
+              {
+                id: "u2c-q10",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 10,
+                content: "",
+                options: [
+                  { id: "a", text: "individualism" },
+                  { id: "b", text: "individual" },
+                  { id: "c", text: "individually" },
+                  { id: "d", text: "individualist" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "individualism: chủ nghĩa cá nhân.",
+              },
+              {
+                id: "u2c-q11",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 11,
+                content: "",
+                options: [
+                  { id: "a", text: "freedom" },
+                  { id: "b", text: "free" },
+                  { id: "c", text: "freely" },
+                  { id: "d", text: "freeing" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "freedom: sự tự do (danh từ).",
+              },
+              {
+                id: "u2c-q12",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 12,
+                content: "",
+                options: [
+                  { id: "a", text: "honesty" },
+                  { id: "b", text: "honest" },
+                  { id: "c", text: "honestly" },
+                  { id: "d", text: "dishonest" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "honesty: sự trung thực.",
+              },
+              {
+                id: "u2c-q13",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 13,
+                content: "",
+                options: [
+                  { id: "a", text: "competition" },
+                  { id: "b", text: "compete" },
+                  { id: "c", text: "competitive" },
+                  { id: "d", text: "competitor" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "competition: sự cạnh tranh.",
+              },
+              {
+                id: "u2c-q14",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 14,
+                content: "",
+                options: [
+                  { id: "a", text: "start to follow" },
+                  { id: "b", text: "follow" },
+                  { id: "c", text: "following" },
+                  { id: "d", text: "followed" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "start to follow: bắt đầu theo.",
+              },
+              {
+                id: "u2c-q15",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 15,
+                content: "",
+                options: [
+                  { id: "a", text: "traditions" },
+                  { id: "b", text: "traditional" },
+                  { id: "c", text: "custom" },
+                  { id: "d", text: "culture" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "traditions: truyền thống.",
+              },
+              {
+                id: "u2c-q16",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 16,
+                content: "",
+                options: [
+                  { id: "a", text: "fail" },
+                  { id: "b", text: "failure" },
+                  { id: "c", text: "failed" },
+                  { id: "d", text: "falling" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "fail to do sth: thất bại trong việc làm gì.",
+              },
+              {
+                id: "u2c-q17",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 17,
+                content: "",
+                options: [
+                  { id: "a", text: "continue to use" },
+                  { id: "b", text: "keep use" },
+                  { id: "c", text: "continued to use" },
+                  { id: "d", text: "go on using" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "continue to use: tiếp tục sử dụng.",
+              },
+              {
+                id: "u2c-q18",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 18,
+                content: "",
+                options: [
+                  { id: "a", text: "native" },
+                  { id: "b", text: "national" },
+                  { id: "c", text: "natural" },
+                  { id: "d", text: "natively" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "native language: ngôn ngữ mẹ đẻ.",
+              },
+              {
+                id: "u2c-q19",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 19,
+                content: "",
+                options: [
+                  { id: "a", text: "keep practising" },
+                  { id: "b", text: "practise" },
+                  { id: "c", text: "keep to practise" },
+                  { id: "d", text: "stop practising" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "keep practising: tiếp tục thực hành.",
+              },
+              {
+                id: "u2c-q20",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 20,
+                content: "",
+                options: [
+                  { id: "a", text: "traditional" },
+                  { id: "b", text: "tradition" },
+                  { id: "c", text: "traditionally" },
+                  { id: "d", text: "custom" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "traditional lifestyle: lối sống truyền thống.",
+              },
+              {
+                id: "u2c-q21",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 21,
+                content: "",
+                options: [
+                  { id: "a", text: "try to force" },
+                  { id: "b", text: "force" },
+                  { id: "c", text: "forced" },
+                  { id: "d", text: "trying to force" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "try to force: cố gắng ép buộc.",
+              },
+              {
+                id: "u2c-q22",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 22,
+                content: "",
+                options: [
+                  { id: "a", text: "to follow" },
+                  { id: "b", text: "follow" },
+                  { id: "c", text: "following" },
+                  { id: "d", text: "followed" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "force sb to do sth: ép ai làm gì.",
+              },
+              {
+                id: "u2c-q23",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 23,
+                content: "",
+                options: [
+                  { id: "a", text: "native country's cultural values" },
+                  { id: "b", text: "native cultural values" },
+                  { id: "c", text: "country's cultural values" },
+                  { id: "d", text: "native country's traditions" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "native country's cultural values: giá trị văn hóa của quê hương.",
+              },
+              {
+                id: "u2c-q24",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 24,
+                content: "",
+                options: [
+                  { id: "a", text: "importance" },
+                  { id: "b", text: "important" },
+                  { id: "c", text: "importantly" },
+                  { id: "d", text: "import" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "the importance of: tầm quan trọng của.",
+              },
+              {
+                id: "u2c-q25",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 25,
+                content: "",
+                options: [
+                  { id: "a", text: "for" },
+                  { id: "b", text: "to" },
+                  { id: "c", text: "of" },
+                  { id: "d", text: "with" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "respect for: sự tôn trọng đối với.",
+              },
+              {
+                id: "u2c-q26",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 26,
+                content: "",
+                options: [
+                  { id: "a", text: "Due to" },
+                  { id: "b", text: "Because" },
+                  { id: "c", text: "Although" },
+                  { id: "d", text: "Despite" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Due to + N: bởi vì.",
+              },
+              {
+                id: "u2c-q27",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 27,
+                content: "",
+                options: [
+                  { id: "a", text: "attitudes to" },
+                  { id: "b", text: "attitude to" },
+                  { id: "c", text: "attitudes for" },
+                  { id: "d", text: "attitude on" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "attitudes to/towards: thái độ đối với.",
+              },
+              {
+                id: "u2c-q28",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 28,
+                content: "",
+                options: [
+                  { id: "a", text: "different from" },
+                  { id: "b", text: "different to" },
+                  { id: "c", text: "differ from" },
+                  { id: "d", text: "differently from" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "different from: khác với.",
+              },
+              {
+                id: "u2c-q29",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 29,
+                content: "",
+                options: [
+                  { id: "a", text: "parents' Asian cultural values" },
+                  { id: "b", text: "parents' cultural values" },
+                  { id: "c", text: "Asian cultural values" },
+                  { id: "d", text: "parent's Asian cultural values" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "parents' Asian cultural values: giá trị văn hóa châu Á của cha mẹ.",
+              },
+              {
+                id: "u2c-q30",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 30,
+                content: "",
+                options: [
+                  { id: "a", text: "what" },
+                  { id: "b", text: "that" },
+                  { id: "c", text: "which" },
+                  { id: "d", text: "how" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "what: những gì.",
+              },
+              {
+                id: "u2c-q31",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 31,
+                content: "",
+                options: [
+                  { id: "a", text: "to do" },
+                  { id: "b", text: "do" },
+                  { id: "c", text: "doing" },
+                  { id: "d", text: "done" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "want sb to do sth.",
+              },
+              {
+                id: "u2c-q32",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 32,
+                content: "",
+                options: [
+                  { id: "a", text: "to do" },
+                  { id: "b", text: "do" },
+                  { id: "c", text: "doing" },
+                  { id: "d", text: "done" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "be expected to do sth.",
+              },
+              {
+                id: "u2c-q33",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 33,
+                content: "",
+                options: [
+                  { id: "a", text: "As a result" },
+                  { id: "b", text: "Therefore" },
+                  { id: "c", text: "However" },
+                  { id: "d", text: "Because" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "As a result: kết quả là.",
+              },
+              {
+                id: "u2c-q34",
+                type: "multiple-choice",
+                passageId: "passage-unit2-culture",
+                blankNumber: 34,
+                content: "",
+                options: [
+                  { id: "a", text: "family traditional values" },
+                  { id: "b", text: "family traditions" },
+                  { id: "c", text: "traditional family values" },
+                  { id: "d", text: "family values" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "family traditional values: giá trị truyền thống gia đình.",
+              },
+            ],
+          },
+          // --- Unit 2 Reading ---
+          {
+            id: "tienganh-unit2-reading",
+            title: "Unit 2 - Reading (p.21) - Generations",
+            examType: "Giữa kì I",
+            description:
+              "Over the past two centuries, different generations were born and given different names.",
+            duration: 45,
+            passages: [
+              {
+                id: "passage-unit2-reading",
+                title:
+                  "Read the following passage and choose the best option for each blank.",
+                content:
+                  "Over the past two centuries, {{1}}. Each generation comes with its characteristics, {{2}}. {{3}}. Generation X refers to the generation born between 1965 and 1980. {{4}}. {{5}}. Gen Xers are also known as critical thinkers {{6}}. {{7}}. Generation Y, also known as Millennials, refers to {{8}}. They are {{9}} and ready to accept changes. {{10}}, {{11}}. They also value teamwork. {{12}} in a team, {{13}}. Generation Z includes people born between the late 1990s and early 2010s, {{14}}. {{15}}. They grew up online and {{16}}. They are very creative and able to experiment with platforms {{17}}. Many Gen Zers are also interested in {{18}}. They saw so many people lose their jobs, {{19}}. Soon a new generation, labelled Gen Alpha, will be on the scene. Let's wait and see if we will notice the generation gap.",
+              },
+            ],
+            questions: [
+              {
+                id: "u2r-q01",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 1,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "different generations were born and given different names",
+                  },
+                  {
+                    id: "b",
+                    text: "same generations were born and given same names",
+                  },
+                  {
+                    id: "c",
+                    text: "different generations were born and given same names",
+                  },
+                  {
+                    id: "d",
+                    text: "different generations were born and called different names",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "Theo nguyên văn: different generations were born and given different names.",
+              },
+              {
+                id: "u2r-q02",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 2,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "which are largely influenced by the historical, economic, and social conditions of the country they live in",
+                  },
+                  {
+                    id: "b",
+                    text: "which are little influenced by the historical, economic, and social conditions of the country they live in",
+                  },
+                  {
+                    id: "c",
+                    text: "which are largely affected by the historical, economic, and social conditions of the country they live in",
+                  },
+                  {
+                    id: "d",
+                    text: "which are mainly influenced by the historical, economic, and social conditions of the country they live in",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "largely influenced by: chịu ảnh hưởng lớn bởi.",
+              },
+              {
+                id: "u2r-q03",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 3,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "However, in many countries the following three generations have common characteristics",
+                  },
+                  {
+                    id: "b",
+                    text: "Therefore, in many countries the following three generations have common characteristics",
+                  },
+                  {
+                    id: "c",
+                    text: "Moreover, in many countries the following three generations have common characteristics",
+                  },
+                  {
+                    id: "d",
+                    text: "However, in some countries the following three generations have common characteristics",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "However: Tuy nhiên.",
+              },
+              {
+                id: "u2r-q04",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 4,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "When Gen Xers grew up, they experienced many social changes and developments in history",
+                  },
+                  {
+                    id: "b",
+                    text: "When Gen Xers grew up, they experienced few social changes and developments in history",
+                  },
+                  {
+                    id: "c",
+                    text: "When Gen Xers grew up, they experienced many economic changes and developments in history",
+                  },
+                  {
+                    id: "d",
+                    text: "When Gen Xers grew up, they experienced many social changes and developments in science",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "many social changes and developments in history: nhiều thay đổi và phát triển xã hội trong lịch sử.",
+              },
+              {
+                id: "u2r-q05",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 5,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "As a result, they are always ready for changes and prepared to work through changes",
+                  },
+                  {
+                    id: "b",
+                    text: "As a result, they are never ready for changes and prepared to work through changes",
+                  },
+                  {
+                    id: "c",
+                    text: "As a result, they are always ready for changes but not prepared to work through changes",
+                  },
+                  {
+                    id: "d",
+                    text: "As a result, they are sometimes ready for changes and prepared to work through changes",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "always ready for changes: luôn sẵn sàng cho những thay đổi.",
+              },
+              {
+                id: "u2r-q06",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 6,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "because they achieved higher levels of education than previous generations",
+                  },
+                  {
+                    id: "b",
+                    text: "because they achieved lower levels of education than previous generations",
+                  },
+                  {
+                    id: "c",
+                    text: "because they achieved higher levels of education than following generations",
+                  },
+                  {
+                    id: "d",
+                    text: "because they achieved the same levels of education than previous generations",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "higher levels of education: trình độ học vấn cao hơn.",
+              },
+              {
+                id: "u2r-q07",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 7,
+                content: "",
+                options: [
+                  { id: "a", text: "Generation Y" },
+                  { id: "b", text: "Generation X" },
+                  { id: "c", text: "Generation Z" },
+                  { id: "d", text: "Generation Alpha" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Generation Y: Thế hệ Y.",
+              },
+              {
+                id: "u2r-q08",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 8,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "those born between the early 1980s and late 1990s",
+                  },
+                  {
+                    id: "b",
+                    text: "those born between the late 1980s and early 1990s",
+                  },
+                  {
+                    id: "c",
+                    text: "those born between the early 1990s and late 1990s",
+                  },
+                  {
+                    id: "d",
+                    text: "those born between the early 1980s and early 1990s",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "born between the early 1980s and late 1990s: sinh từ đầu những năm 1980 đến cuối những năm 1990.",
+              },
+              {
+                id: "u2r-q09",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 9,
+                content: "",
+                options: [
+                  { id: "a", text: "curious" },
+                  { id: "b", text: "curiousity" },
+                  { id: "c", text: "curiously" },
+                  { id: "d", text: "incurious" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "curious (adj): tò mò.",
+              },
+              {
+                id: "u2r-q10",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 10,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "If there is a faster, better way of doing something",
+                  },
+                  {
+                    id: "b",
+                    text: "If there is a slower, worse way of doing something",
+                  },
+                  {
+                    id: "c",
+                    text: "If there is a faster, better way of doing nothing",
+                  },
+                  {
+                    id: "d",
+                    text: "If there is a faster, worse way of doing something",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "a faster, better way of doing something: một cách nhanh hơn, tốt hơn để làm việc gì đó.",
+              },
+              {
+                id: "u2r-q11",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 11,
+                content: "",
+                options: [
+                  { id: "a", text: "Millennials want to try it out" },
+                  { id: "b", text: "Millennials want to give it up" },
+                  { id: "c", text: "Millennials want to try it on" },
+                  { id: "d", text: "Millennials want to take it out" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "try it out: thử nó.",
+              },
+              {
+                id: "u2r-q12",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 12,
+                content: "",
+                options: [
+                  { id: "a", text: "When working" },
+                  { id: "b", text: "When playing" },
+                  { id: "c", text: "When studying" },
+                  { id: "d", text: "When sleeping" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "When working in a team: Khi làm việc nhóm.",
+              },
+              {
+                id: "u2r-q13",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 13,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "Millennials welcome different points of view and ideas from others",
+                  },
+                  {
+                    id: "b",
+                    text: "Millennials reject different points of view and ideas from others",
+                  },
+                  {
+                    id: "c",
+                    text: "Millennials welcome same points of view and ideas from others",
+                  },
+                  {
+                    id: "d",
+                    text: "Millennials welcome different points of view and ideas from themselves",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "welcome different points of view: chào đón những quan điểm khác nhau.",
+              },
+              {
+                id: "u2r-q14",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 14,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "a time of great technological developments and changes",
+                  },
+                  {
+                    id: "b",
+                    text: "a time of little technological developments and changes",
+                  },
+                  {
+                    id: "c",
+                    text: "a time of great economic developments and changes",
+                  },
+                  {
+                    id: "d",
+                    text: "a time of great technological developments and stability",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "great technological developments and changes: những phát triển và thay đổi công nghệ to lớn.",
+              },
+              {
+                id: "u2r-q15",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 15,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "That is why Gen Zers are also called digital natives",
+                  },
+                  {
+                    id: "b",
+                    text: "That is why Gen Xers are also called digital natives",
+                  },
+                  {
+                    id: "c",
+                    text: "That is why Gen Zers are also called digital immigrants",
+                  },
+                  {
+                    id: "d",
+                    text: "That is why Gen Yers are also called digital natives",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "digital natives: những người bản địa kỹ thuật số.",
+              },
+              {
+                id: "u2r-q16",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 16,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "never knew the world before digital and social media",
+                  },
+                  {
+                    id: "b",
+                    text: "always knew the world before digital and social media",
+                  },
+                  {
+                    id: "c",
+                    text: "never knew the world after digital and social media",
+                  },
+                  {
+                    id: "d",
+                    text: "sometimes knew the world before digital and social media",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "never knew the world before: chưa từng biết thế giới trước khi có...",
+              },
+              {
+                id: "u2r-q17",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 17,
+                content: "",
+                options: [
+                  { id: "a", text: "to suit their needs" },
+                  { id: "b", text: "to suit their wants" },
+                  { id: "c", text: "to suit their hobbies" },
+                  { id: "d", text: "to suit their styles" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "to suit their needs: để phù hợp với nhu cầu của họ.",
+              },
+              {
+                id: "u2r-q18",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 18,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "starting their own businesses and companies",
+                  },
+                  { id: "b", text: "starting their own schools and companies" },
+                  {
+                    id: "c",
+                    text: "starting their own businesses and families",
+                  },
+                  {
+                    id: "d",
+                    text: "ending their own businesses and companies",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "starting their own businesses and companies: bắt đầu công việc kinh doanh và công ty của riêng họ.",
+              },
+              {
+                id: "u2r-q19",
+                type: "multiple-choice",
+                passageId: "passage-unit2-reading",
+                blankNumber: 19,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "so they think it is safer to be your own boss than relying on someone else to hire you",
+                  },
+                  {
+                    id: "b",
+                    text: "so they think it is safer to be an employee than relying on someone else to hire you",
+                  },
+                  {
+                    id: "c",
+                    text: "so they think it is riskier to be your own boss than relying on someone else to hire you",
+                  },
+                  {
+                    id: "d",
+                    text: "so they think it is safer to be your own boss than relying on yourself to hire you",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "safer to be your own boss: an toàn hơn khi làm chủ chính mình.",
+              },
+            ],
+          },
+          // --- Unit 3 Reading ---
+          {
+            id: "tienganh-unit3-reading",
+            title: "Unit 3 - Reading (p.31) - Cities of the Future",
+            examType: "Giữa kì I",
+            description:
+              "By 2050 the world's population is expected to reach 10 billion...",
+            duration: 45,
+            passages: [
+              {
+                id: "passage-unit3-reading",
+                title:
+                  "Read the following passage and choose the best option for each blank.",
+                content:
+                  "By 2050 the world's population {{1}}, and nearly 70 per cent of these people will live in cities. The cities of the future will be 'smarter' and more sustainable {{2}}. A smart city is a modern urban area {{3}}. The new technologies can help save time {{4}}. They will also help cities operate more efficiently. {{5}}. These smart technologies will {{6}}. {{7}}. They will include a lot of green space {{8}}. {{9}} can be done in various ways including underground and rooftop farming, green roofs, and roof gardens. {{10}}. Modern infrastructure will also be more eco-friendly. Computer-controlled transport systems {{11}} will produce less greenhouse gas emissions. {{12}}. These features will make future cities more liveable {{13}}.",
+              },
+            ],
+            questions: [
+              {
+                id: "u3r-q01",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 1,
+                content: "",
+                options: [
+                  { id: "a", text: "is expected to reach 10 billion" },
+                  { id: "b", text: "is expected to decrease to 10 billion" },
+                  { id: "c", text: "is expected to reach 100 billion" },
+                  { id: "d", text: "was expected to reach 10 billion" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "is expected to reach 10 billion: dự kiến đạt 10 tỷ.",
+              },
+              {
+                id: "u3r-q02",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 2,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "to cope with a growing population and improve people's lives",
+                  },
+                  {
+                    id: "b",
+                    text: "to cope with a falling population and improve people's lives",
+                  },
+                  {
+                    id: "c",
+                    text: "to cope with a growing population and worsen people's lives",
+                  },
+                  {
+                    id: "d",
+                    text: "to deal with a growing population and improve people's lives",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "to cope with a growing population: để đối phó với dân số tăng.",
+              },
+              {
+                id: "u3r-q03",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 3,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "that uses a range of technologies to provide services, solve problems, and support people better",
+                  },
+                  {
+                    id: "b",
+                    text: "that uses a single technology to provide services, solve problems, and support people better",
+                  },
+                  {
+                    id: "c",
+                    text: "that uses a range of technologies to provide services, solve problems, and support people worse",
+                  },
+                  {
+                    id: "d",
+                    text: "who uses a range of technologies to provide services, solve problems, and support people better",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "uses a range of technologies: sử dụng một loạt các công nghệ.",
+              },
+              {
+                id: "u3r-q04",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 4,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "by predicting changes in the traffic and warning people of possible traffic jams",
+                  },
+                  {
+                    id: "b",
+                    text: "by predicting changes in the weather and warning people of possible traffic jams",
+                  },
+                  {
+                    id: "c",
+                    text: "by ignoring changes in the traffic and warning people of possible traffic jams",
+                  },
+                  {
+                    id: "d",
+                    text: "by predicting changes in the traffic and warning people of impossible traffic jams",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "predicting changes in the traffic: dự đoán thay đổi giao thông.",
+              },
+              {
+                id: "u3r-q05",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 5,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "For example, street lights can turn off when the streets are empty, and sensors can inform waste collection teams when the bins are full",
+                  },
+                  {
+                    id: "b",
+                    text: "For example, street lights can turn on when the streets are empty, and sensors can inform waste collection teams when the bins are full",
+                  },
+                  {
+                    id: "c",
+                    text: "For instance, street lights can turn off when the streets are empty, and sensors can inform waste collection teams when the bins are full",
+                  },
+                  {
+                    id: "d",
+                    text: "For example, street lights can turn off when the streets are full, and sensors can inform waste collection teams when the bins are empty",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "Ví dụ, đèn đường có thể tắt khi đường vắng.",
+              },
+              {
+                id: "u3r-q06",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 6,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "help save energy, reduce air pollution, and fight climate change",
+                  },
+                  {
+                    id: "b",
+                    text: "help waste energy, reduce air pollution, and fight climate change",
+                  },
+                  {
+                    id: "c",
+                    text: "help save energy, increase air pollution, and fight climate change",
+                  },
+                  {
+                    id: "d",
+                    text: "help save water, reduce air pollution, and fight climate change",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "save energy, reduce air pollution, and fight climate change: tiết kiệm năng lượng, giảm ô nhiễm không khí và chống biến đổi khí hậu.",
+              },
+              {
+                id: "u3r-q07",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 7,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "Cities in the future will also be sustainable",
+                  },
+                  {
+                    id: "b",
+                    text: "Cities in the past will also be sustainable",
+                  },
+                  {
+                    id: "c",
+                    text: "Cities in the future will also be polluted",
+                  },
+                  {
+                    id: "d",
+                    text: "Cities in the future will also be unsustainable",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "Cities in the future will also be sustainable: Các thành phố trong tương lai cũng sẽ bền vững.",
+              },
+              {
+                id: "u3r-q08",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 8,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "and become home to more plants and animals",
+                  },
+                  {
+                    id: "b",
+                    text: "and become home to fewer plants and animals",
+                  },
+                  { id: "c", text: "and become home to more plants and cars" },
+                  {
+                    id: "d",
+                    text: "and become home to more rocks and animals",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "become home to more plants and animals: trở thành nhà của nhiều thực vật và động vật hơn.",
+              },
+              {
+                id: "u3r-q09",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 9,
+                content: "",
+                options: [
+                  { id: "a", text: "Making room for biodiversity and nature" },
+                  { id: "b", text: "Making room for buildings and nature" },
+                  { id: "c", text: "Making room for pollution and nature" },
+                  { id: "d", text: "Taking room for biodiversity and nature" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "Making room for biodiversity and nature: Tạo không gian cho đa dạng sinh học và thiên nhiên.",
+              },
+              {
+                id: "u3r-q10",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 10,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "As people will care more about the environment, most cities will use renewable and clean energy",
+                  },
+                  {
+                    id: "b",
+                    text: "As people will care less about the environment, most cities will use renewable and clean energy",
+                  },
+                  {
+                    id: "c",
+                    text: "As people will care more about the economy, most cities will use renewable and clean energy",
+                  },
+                  {
+                    id: "d",
+                    text: "As people will care more about the environment, most cities will use non-renewable and clean energy",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "care more about the environment: quan tâm nhiều hơn đến môi trường.",
+              },
+              {
+                id: "u3r-q11",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 11,
+                content: "",
+                options: [
+                  { id: "a", text: "like electric buses and trains" },
+                  { id: "b", text: "like diesel buses and trains" },
+                  { id: "c", text: "like electric cars and planes" },
+                  { id: "d", text: "like electric bikes and trains" },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation: "electric buses and trains: xe buýt và tàu điện.",
+              },
+              {
+                id: "u3r-q12",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 12,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "In addition, more pedestrian zones for walking and cycle paths will be made available for people in all neighbourhoods",
+                  },
+                  {
+                    id: "b",
+                    text: "In addition, fewer pedestrian zones for walking and cycle paths will be made available for people in all neighbourhoods",
+                  },
+                  {
+                    id: "c",
+                    text: "In addition, more pedestrian zones for driving and cycle paths will be made available for people in all neighbourhoods",
+                  },
+                  {
+                    id: "d",
+                    text: "In addition, more pedestrian zones for walking and cycle paths will be destroyed for people in all neighbourhoods",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "more pedestrian zones for walking: nhiều khu vực dành cho người đi bộ hơn.",
+              },
+              {
+                id: "u3r-q13",
+                type: "multiple-choice",
+                passageId: "passage-unit3-reading",
+                blankNumber: 13,
+                content: "",
+                options: [
+                  {
+                    id: "a",
+                    text: "and will provide a high quality of life to city dwellers",
+                  },
+                  {
+                    id: "b",
+                    text: "and will provide a low quality of life to city dwellers",
+                  },
+                  {
+                    id: "c",
+                    text: "and will provide a high quality of life to farmers",
+                  },
+                  {
+                    id: "d",
+                    text: "and will provide a poor quality of life to city dwellers",
+                  },
+                ],
+                correctOptionId: "a",
+                score: 0.25,
+                explanation:
+                  "provide a high quality of life to city dwellers: cung cấp chất lượng cuộc sống cao cho cư dân thành thị.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
-
 /* ====== 2b. ÂM THANH ====== */
 const SoundFX = {
   ctx: null,
@@ -4875,6 +6811,42 @@ function getSubjectExamCount(subject) {
     0,
   );
 }
+function getPassagesForContext() {
+  if (state.session?.examSnapshot?.passages) {
+    return state.session.examSnapshot.passages;
+  }
+  if (state.lastRecord?.examSnapshot?.passages) {
+    return state.lastRecord.examSnapshot.passages;
+  }
+  return [];
+}
+
+function getPassageBlankDisplay(question, answer, passage) {
+  if (!answer) return "";
+  switch (question.type) {
+    case "short-answer":
+      return String(answer.value || "").trim();
+    case "multiple-choice": {
+      if (!answer.selectedOptionId) return "";
+      const opt = (question.options || []).find(
+        (o) => o.id === answer.selectedOptionId,
+      );
+      return opt ? opt.text : "";
+    }
+    case "fill-blank": {
+      if (question.passageId && question.correctOptionId) {
+        if (!answer.selectedOptionId) return "";
+        const ps =
+          passage ||
+          getPassagesForContext().find((p) => p.id === question.passageId);
+        const opt = ps?.options?.find((o) => o.id === answer.selectedOptionId);
+        return opt ? opt.text : "";
+      }
+      return "";
+    }
+  }
+  return "";
+}
 
 /* ====== 4. LƯU TRỮ ====== */
 let store = {
@@ -5015,6 +6987,14 @@ function calculateQuestionScore(question, answer) {
       return 0;
     }
     case "fill-blank": {
+      // Passage-based fill-blank: 1 chỗ, 1 đáp án từ word bank
+      if (question.passageId && question.correctOptionId) {
+        if (!answer || !answer.selectedOptionId) return 0;
+        return answer.selectedOptionId === question.correctOptionId
+          ? maxScore
+          : 0;
+      }
+      // Multi-blank fill-blank truyền thống
       if (
         !answer ||
         !answer.blanks ||
@@ -5044,6 +7024,9 @@ function hasAnyAnswer(question, answer) {
     case "short-answer":
       return answer.value != null && String(answer.value).trim() !== "";
     case "fill-blank":
+      if (question.passageId && question.correctOptionId) {
+        return !!answer.selectedOptionId;
+      }
       return !!(answer.blanks && Object.keys(answer.blanks).length);
   }
   return false;
@@ -5107,8 +7090,11 @@ function createExamSnapshot(exam) {
     examType: exam.examType || "",
     description: exam.description || "",
     duration: exam.duration || null,
+    passages: deepClone(exam.passages || []), // Thêm dòng này
     questions: [],
+    blocks: [], // Thêm dòng này
   };
+
   const globalShuffle = store.shuffleOptions !== false;
   let ordered;
 
@@ -5134,7 +7120,8 @@ function createExamSnapshot(exam) {
     const copy = deepClone(q);
     if (
       globalShuffle &&
-      (q.type === "multiple-choice" || q.type === "fill-blank") &&
+      (q.type === "multiple-choice" ||
+        (q.type === "fill-blank" && !q.passageId)) &&
       q.shuffleOptions !== false &&
       Array.isArray(copy.options)
     ) {
@@ -5142,6 +7129,36 @@ function createExamSnapshot(exam) {
     }
     snapshot.questions.push(copy);
   }
+
+  // Xáo word bank ở cấp passage (chỉ khi setting bật + passage không tắt shuffle)
+  if (globalShuffle) {
+    for (const p of snapshot.passages) {
+      if (Array.isArray(p.options) && p.shuffleOptions !== false) {
+        p.options = shuffle(p.options);
+      }
+    }
+  }
+
+  // Xây blocks cho chế độ Thi: mỗi passage render 1 lần, câu hỏi nối tiếp
+  const emittedPassages = new Set();
+  for (const q of snapshot.questions) {
+    if (q.passageId) {
+      if (!emittedPassages.has(q.passageId)) {
+        emittedPassages.add(q.passageId);
+        const groupQs = snapshot.questions.filter(
+          (x) => x.passageId === q.passageId,
+        );
+        snapshot.blocks.push({
+          type: "passage-block",
+          passageId: q.passageId,
+          questionIds: groupQs.map((x) => x.id),
+        });
+      }
+    } else {
+      snapshot.blocks.push({ type: "question-block", questionId: q.id });
+    }
+  }
+
   return snapshot;
 }
 
@@ -6210,21 +8227,50 @@ function renderExam() {
   exitBtn.addEventListener("click", confirmExitSession);
   stick.appendChild(exitBtn);
   wrap.appendChild(stick);
+
   const list = el("div", { class: "exam-question-list" });
-  const questions = state.session.examSnapshot.questions;
-  for (let i = 0; i < questions.length; i++) {
-    const q = questions[i];
-    const block = renderQuestionBlock(q, { mode: "exam", checked: false });
+  const snapshot = state.session.examSnapshot;
+  const total = snapshot.questions.length;
+  let globalIndex = 0;
+
+  const renderNumbered = (q) => {
+    globalIndex++;
+    const block = renderQuestionBlock(q, {
+      mode: "exam",
+      checked: false,
+      renderPassage: false,
+    });
     block.insertBefore(
       el("div", {
         class: "exam-question-number",
-        text: `Câu ${i + 1}/${questions.length}`,
+        text: `Câu ${globalIndex}/${total}`,
       }),
       block.firstChild,
     );
-    list.appendChild(block);
+    return block;
+  };
+
+  for (const blk of snapshot.blocks) {
+    if (blk.type === "question-block") {
+      const q = snapshot.questions.find((x) => x.id === blk.questionId);
+      if (!q) continue;
+      list.appendChild(renderNumbered(q));
+    } else if (blk.type === "passage-block") {
+      const passage = snapshot.passages.find((p) => p.id === blk.passageId);
+      if (!passage) continue;
+      const wrapper = el("div", { class: "passage-block-wrapper" });
+      wrapper.appendChild(renderPassage(passage, null, { checked: false }));
+      for (const qid of blk.questionIds) {
+        const q = snapshot.questions.find((x) => x.id === qid);
+        if (!q) continue;
+        wrapper.appendChild(renderNumbered(q));
+      }
+      list.appendChild(wrapper);
+    }
   }
+
   wrap.appendChild(list);
+
   const bottomActions = el("div", { class: "exam-bottom-actions" });
   const submitBottom = el("button", {
     class: "btn btn-primary btn-large",
@@ -6234,9 +8280,9 @@ function renderExam() {
   submitBottom.addEventListener("click", confirmSubmitExam);
   bottomActions.appendChild(submitBottom);
   wrap.appendChild(bottomActions);
+
   setTimeout(() => {
     updateExamProgress();
-    // Không gọi startExamTimer ở đây — startSession đã gọi
   }, 0);
   return wrap;
 }
@@ -6386,7 +8432,17 @@ function renderWrongQuestionsList(record) {
         text: getTypeLabel(item.question.type),
       }),
     );
-    card.appendChild(renderQuestionPrompt(item.question));
+    const answerMap = {};
+    for (const r of record.questions) {
+      answerMap[r.question.id] = r.answer;
+    }
+    card.appendChild(
+      renderQuestionPrompt(item.question, {
+        checked: true,
+        questions: record.examSnapshot.questions,
+        answers: answerMap,
+      }),
+    );
     card.appendChild(
       el(
         "div",
@@ -6674,6 +8730,135 @@ function showProfileSwitchModal() {
   });
 }
 
+function renderPassage(passage, currentQuestion, ctx) {
+  ctx = ctx || {};
+  const questions =
+    ctx.questions ||
+    state.session?.examSnapshot?.questions ||
+    state.lastRecord?.examSnapshot?.questions ||
+    [];
+  const answers = ctx.answers || (state.session ? state.session.answers : {});
+
+  const wrap = el("div", {
+    class: "passage-box",
+    "data-passage-id": passage.id,
+  });
+  if (passage.title) {
+    wrap.appendChild(
+      el("div", { class: "passage-title", text: passage.title }),
+    );
+  }
+  const body = el("div", { class: "passage-content" });
+  const parts = String(passage.content || "").split(/\{\{([^}]+)\}\}/g);
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 0) {
+      if (parts[i]) body.appendChild(document.createTextNode(parts[i]));
+    } else {
+      const blankNum = parts[i];
+      const relatedQ = questions.find(
+        (q) =>
+          q.passageId === passage.id &&
+          String(q.blankNumber) === String(blankNum),
+      );
+      const isCurrent =
+        currentQuestion &&
+        currentQuestion.passageId === passage.id &&
+        String(currentQuestion.blankNumber) === String(blankNum);
+
+      const blankEl = el("span", {
+        class: "passage-blank",
+        "data-blank-num": blankNum,
+        "data-qid": relatedQ ? relatedQ.id : "",
+      });
+
+      if (isCurrent) blankEl.classList.add("current");
+
+      let displayText = "";
+      if (relatedQ) {
+        displayText = getPassageBlankDisplay(
+          relatedQ,
+          answers[relatedQ.id],
+          passage,
+        );
+      }
+
+      if (displayText) {
+        blankEl.classList.add("filled");
+        blankEl.textContent = displayText;
+      } else {
+        blankEl.textContent = `(${blankNum}) ______`;
+      }
+
+      if (ctx.checked && relatedQ && isCurrent) {
+        const ans = answers[relatedQ.id];
+        const sc = calculateQuestionScore(relatedQ, ans);
+        if (sc >= (Number(relatedQ.score) || 0) - 0.0001) {
+          blankEl.classList.add("correct");
+        } else {
+          blankEl.classList.add("wrong");
+        }
+      }
+
+      if (relatedQ) {
+        blankEl.addEventListener("click", () => {
+          const qEl = document.querySelector(
+            `.question-card[data-qid="${relatedQ.id}"]`,
+          );
+          if (qEl) {
+            qEl.scrollIntoView({ behavior: "smooth", block: "center" });
+            const input = qEl.querySelector(
+              ".short-answer-input, .option, .fill-option",
+            );
+            if (input) setTimeout(() => input.focus(), 300);
+          }
+        });
+      }
+
+      body.appendChild(blankEl);
+    }
+  }
+  wrap.appendChild(body);
+  return wrap;
+}
+
+function updatePassageBlankForQuestion(question) {
+  if (!question.passageId) return;
+  const allAnswers = state.session?.answers || {};
+  const blankEl = document.querySelector(
+    `.passage-box[data-passage-id="${question.passageId}"] .passage-blank[data-qid="${question.id}"]`,
+  );
+  if (!blankEl) return;
+  const passage = getPassagesForContext().find(
+    (p) => p.id === question.passageId,
+  );
+  const ans = allAnswers[question.id];
+  const text = getPassageBlankDisplay(question, ans, passage);
+  if (text) {
+    blankEl.textContent = text;
+    blankEl.classList.add("filled");
+  } else {
+    blankEl.textContent = `(${question.blankNumber}) ______`;
+    blankEl.classList.remove("filled");
+  }
+}
+
+function refreshPassageFillBlanks(passageId, ctx) {
+  if (!state.session) return;
+  const qs = state.session.examSnapshot.questions.filter(
+    (q) =>
+      q.passageId === passageId && q.type === "fill-blank" && q.correctOptionId,
+  );
+  for (const q of qs) {
+    const area = document.querySelector(
+      `.question-card[data-qid="${q.id}"] .passage-fill-blank-area`,
+    );
+    if (!area) continue;
+    const newArea = renderPassageFillBlank(q, ctx || { checked: false });
+    area.replaceWith(newArea);
+  }
+}
+
 /* ====== 11. RENDER CÂU HỎI ====== */
 function renderQuestionBlock(question, ctx) {
   const block = el("div", { class: "question-card", "data-qid": question.id });
@@ -6694,8 +8879,26 @@ function renderQuestionBlock(question, ctx) {
   return block;
 }
 
-function renderQuestionPrompt(question) {
+function renderQuestionPrompt(question, ctx) {
+  ctx = ctx || {};
   const p = el("div", { class: "question-prompt" });
+
+  // Passage cho câu hỏi thuộc đoạn văn
+  if (question.passageId && ctx.renderPassage !== false) {
+    const passage = getPassagesForContext().find(
+      (ps) => ps.id === question.passageId,
+    );
+    if (passage) {
+      p.appendChild(
+        renderPassage(passage, question, {
+          checked: ctx.checked,
+          questions: ctx.questions,
+          answers: ctx.answers,
+        }),
+      );
+    }
+  }
+
   if (question.type !== "fill-blank" && question.content) {
     p.appendChild(
       el("div", { class: "question-content", text: question.content }),
@@ -6752,6 +8955,7 @@ function renderMultipleChoice(question, ctx) {
           .querySelectorAll(".option")
           .forEach((o) => o.classList.remove("selected"));
         btn.classList.add("selected");
+        if (question.passageId) updatePassageBlankForQuestion(question);
         if (state.session.mode === "exam") updateExamProgress();
       });
     }
@@ -6832,10 +9036,7 @@ function renderShortAnswer(question, ctx) {
   const container = el("div", { class: "short-answer-area" });
   const answer = state.session.answers[question.id] || { value: "" };
   const currentValue = answer.value || "";
-  const maxLen = Math.min(
-    question.maxLength || MAX_SHORT_ANSWER_LENGTH,
-    MAX_SHORT_ANSWER_LENGTH,
-  );
+  const maxLen = question.maxLength || MAX_SHORT_ANSWER_LENGTH;
   const interactive = !ctx.checked;
   const input = el("input", {
     type: "text",
@@ -6857,6 +9058,7 @@ function renderShortAnswer(question, ctx) {
       state.session.answers[question.id] = { value: "" };
     state.session.answers[question.id].value = input.value;
     counter.textContent = `${input.value.length}/${maxLen} ký tự`;
+    if (question.passageId) updatePassageBlankForQuestion(question);
     if (state.session.mode === "exam") updateExamProgress();
   });
   if (ctx.checked) {
@@ -6865,7 +9067,7 @@ function renderShortAnswer(question, ctx) {
   }
   container.appendChild(input);
   container.appendChild(counter);
-  if (interactive) {
+  if (interactive && !question.passageId) {
     const keypad = el("div", { class: "virtual-keypad" });
     const insertChar = (ch) => {
       if (input.value.length >= maxLen) return;
@@ -7034,6 +9236,9 @@ function renderFillBlank(question, ctx) {
 }
 
 function rerenderFillBlank(question, ctx) {
+  if (question.passageId && question.correctOptionId) {
+    return renderPassageFillBlank(question, ctx);
+  }
   const area = document.querySelector(`[data-fill-area="${question.id}"]`);
   if (!area) return;
   area.replaceWith(renderFillBlank(question, ctx));
@@ -7078,6 +9283,90 @@ function renderFeedback(question, answer, score) {
   );
   return fb;
 }
+function renderPassageFillBlank(question, ctx) {
+  const container = el("div", { class: "passage-fill-blank-area" });
+  const passage = getPassagesForContext().find(
+    (p) => p.id === question.passageId,
+  );
+  if (!passage || !Array.isArray(passage.options)) {
+    container.appendChild(
+      el("p", {
+        class: "muted",
+        text: "(Không tìm thấy word bank của passage.)",
+      }),
+    );
+    return container;
+  }
+
+  const answer = state.session.answers[question.id] || {};
+  const selectedId = answer.selectedOptionId;
+  const interactive = !ctx.checked;
+  const allowReuse = passage.allowReuse === true;
+
+  // Tìm các option đã bị câu khác trong cùng passage dùng
+  const usedByOthers = new Set();
+  if (!allowReuse) {
+    for (const q of state.session.examSnapshot.questions) {
+      if (
+        q.passageId === passage.id &&
+        q.id !== question.id &&
+        q.type === "fill-blank" &&
+        q.correctOptionId
+      ) {
+        const otherAns = state.session.answers[q.id];
+        if (otherAns && otherAns.selectedOptionId) {
+          usedByOthers.add(otherAns.selectedOptionId);
+        }
+      }
+    }
+  }
+
+  const hintText = ctx.checked
+    ? selectedId
+      ? `Đã chọn: "${getPassageBlankDisplay(question, answer, passage)}"`
+      : "(Bạn chưa chọn đáp án)"
+    : selectedId
+      ? `Đã chọn: "${getPassageBlankDisplay(question, answer, passage)}". Chạm từ khác để thay, chạm lại để bỏ.`
+      : "Chọn một từ bên dưới để điền vào chỗ trống.";
+  container.appendChild(el("div", { class: "fill-hint", text: hintText }));
+
+  const pool = el("div", { class: "fill-options" });
+  for (const opt of passage.options) {
+    const isUsedByOther = usedByOthers.has(opt.id);
+    const isSelected = selectedId === opt.id;
+    let extraClass = "";
+    if (isSelected) extraClass += " selected";
+    if (isUsedByOther) extraClass += " used";
+    if (ctx.checked && isSelected) {
+      extraClass += opt.id === question.correctOptionId ? " correct" : " wrong";
+    }
+
+    const btn = el("button", {
+      class: "fill-option" + extraClass,
+      type: "button",
+      text: opt.text,
+      disabled: !interactive || isUsedByOther,
+    });
+
+    if (interactive && !isUsedByOther) {
+      btn.addEventListener("click", () => {
+        if (!state.session.answers[question.id])
+          state.session.answers[question.id] = {};
+        if (isSelected) {
+          delete state.session.answers[question.id].selectedOptionId;
+        } else {
+          state.session.answers[question.id].selectedOptionId = opt.id;
+        }
+        updatePassageBlankForQuestion(question);
+        refreshPassageFillBlanks(passage.id, { checked: false });
+        if (state.session.mode === "exam") updateExamProgress();
+      });
+    }
+    pool.appendChild(btn);
+  }
+  container.appendChild(pool);
+  return container;
+}
 
 function getUserAnswerDisplay(question, answer) {
   if (!answer) return "(chưa trả lời)";
@@ -7104,6 +9393,14 @@ function getUserAnswerDisplay(question, answer) {
         ? String(answer.value)
         : "(chưa trả lời)";
     case "fill-blank": {
+      if (question.passageId && question.correctOptionId) {
+        if (!answer || !answer.selectedOptionId) return "(chưa trả lời)";
+        const ps = getPassagesForContext().find(
+          (p) => p.id === question.passageId,
+        );
+        const opt = ps?.options?.find((o) => o.id === answer.selectedOptionId);
+        return opt ? opt.text : "(không xác định)";
+      }
       if (!answer.blanks) return "(chưa trả lời)";
       return question.blanks
         .map((b) => {
@@ -7133,13 +9430,21 @@ function getCorrectAnswerDisplay(question) {
         .join("; ");
     case "short-answer":
       return String(question.answer);
-    case "fill-blank":
+    case "fill-blank": {
+      if (question.passageId && question.correctOptionId) {
+        const ps = getPassagesForContext().find(
+          (p) => p.id === question.passageId,
+        );
+        const opt = ps?.options?.find((o) => o.id === question.correctOptionId);
+        return opt ? opt.text : "(không xác định)";
+      }
       return question.blanks
         .map((b) => {
           const opt = question.options.find((o) => o.id === b.correctAnswerId);
           return `${b.id}: ${opt ? opt.text : b.correctAnswerId}`;
         })
         .join("; ");
+    }
   }
   return "";
 }
